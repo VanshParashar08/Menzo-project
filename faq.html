@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions — Menzo | Help &amp; Answers</title>
+  <meta name="description" content="Quick answers to help you get started with Menzo digital menus. No app required, setup in 5 minutes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/landing.css" />
+  <link rel="stylesheet" href="/src/styles/faq.css" />
+</head>
+<body class="faq-page-body">
+
+  <!-- ============================================================
+       HEADER / NAVBAR
+       ============================================================ -->
+  <header class="navbar-wrapper">
+    <div class="navbar-container">
+      <a href="/" class="brand-logo" aria-label="Menzo Home">
+        <img src="/images/menzo-icon.png" alt="Menzo" class="brand-logo-img" />
+        <span class="brand-wordmark"><span class="brand-name">Menzo</span></span>
+      </a>
+      <nav class="nav-menu-desktop" aria-label="Main Navigation">
+        <a href="/features.html" class="nav-item">Features</a>
+        <a href="/pricing.html" class="nav-item">Pricing</a>
+        <a href="/#restaurants" class="nav-item">For Restaurants</a>
+        <a href="/faq.html" class="nav-item nav-item--active-faq" aria-current="page">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="/generator.html" class="nav-login-btn">Log in</a>
+        <a href="/get-started.html" class="nav-cta-btn">Get Started</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-drawer" id="mobile-menu">
+      <nav class="mobile-nav-links">
+        <a href="/features.html" class="mobile-nav-item">Features</a>
+        <a href="/pricing.html" class="mobile-nav-item">Pricing</a>
+        <a href="/#restaurants" class="mobile-nav-item">For Restaurants</a>
+        <a href="/faq.html" class="mobile-nav-item active">FAQ</a>
+        <div class="mobile-nav-divider"></div>
+        <a href="/generator.html" class="mobile-nav-login">Log in</a>
+        <a href="/get-started.html" class="mobile-nav-cta">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         FAQ HERO SECTION
+         ============================================================ -->
+    <section class="faq-hero-section">
+      <div class="faq-hero-container">
+
+        <!-- Left Handwritten Doodle -->
+        <div class="faq-doodle-left" aria-hidden="true">
+          <span class="faq-doodle-text-left">Questions<br />today.<br />Better menus<br />tomorrow.</span>
+          <svg class="faq-doodle-arrow-left" width="55" height="55" viewBox="0 0 55 55" fill="none">
+            <path d="M10 8 C 12 28, 25 44, 46 45" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <polyline points="35 49 47 45 42 34" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Center Title & Subtitle -->
+        <div class="faq-hero-title-wrap">
+          <h1 class="faq-hero-title">
+            Frequently<br />
+            Asked <span class="highlight-orange">Questions</span>
+          </h1>
+          <p class="faq-hero-subtitle">
+            Quick answers to help you get started with Menzo.
+          </p>
+        </div>
+
+        <!-- Right Hero Illustration & Doodle Wrap -->
+        <div class="faq-hero-right-wrap">
+          <!-- Table Tent with "Good Food Good Answers." + Plant + Vase -->
+          <div class="hero-tent-illustration" aria-hidden="true">
+            <svg class="tent-svg" width="230" height="195" viewBox="0 0 230 195" fill="none">
+              <!-- Soft ground ellipse shadow -->
+              <ellipse cx="112" cy="170" rx="95" ry="15" fill="#F7DEC8" opacity="0.6"/>
+
+              <!-- 3 Orange Spark Rays on Left of Tent -->
+              <line x1="16" y1="70" x2="36" y2="78" stroke="#F4512A" stroke-width="2.6" stroke-linecap="round"/>
+              <line x1="10" y1="98" x2="32" y2="98" stroke="#F4512A" stroke-width="2.6" stroke-linecap="round"/>
+              <line x1="16" y1="126" x2="38" y2="118" stroke="#F4512A" stroke-width="2.6" stroke-linecap="round"/>
+
+              <!-- Plant behind Table Tent (Top Right) -->
+              <path d="M112 65 C 116 38, 122 14, 120 2" stroke="#111820" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="116" cy="16" rx="9" ry="16" transform="rotate(-20 116 16)" fill="#F4512A"/>
+              <ellipse cx="132" cy="26" rx="9" ry="16" transform="rotate(35 132 26)" fill="#F4512A"/>
+              <path d="M122 48 C 134 44, 142 60, 134 74 C 126 82, 120 68, 122 48 Z" fill="#111820"/>
+
+              <!-- Ceramic Vase / Jar on the right of the tent -->
+              <path d="M158 132 L 170 132 L 170 122 L 158 122 Z" fill="#FFFFFF" stroke="#111820" stroke-width="2"/>
+              <path d="M156 132 C 148 140, 148 152, 154 162 C 160 170, 168 170, 174 162 C 180 152, 180 140, 172 132 Z" fill="#FFFFFF" stroke="#111820" stroke-width="2.4" stroke-linejoin="round"/>
+              <path d="M164 122 C 162 102, 166 84, 174 72" stroke="#111820" stroke-width="2.5" stroke-linecap="round"/>
+              <ellipse cx="174" cy="70" rx="6" ry="13" transform="rotate(22 174 70)" fill="#111820"/>
+
+              <!-- Inside / Back Fold Face of Tent (Terracotta/Orange Shadow) -->
+              <polygon points="114,32 134,46 124,162 105,150" fill="#DF3E18" stroke="#111820" stroke-width="2.2" stroke-linejoin="round"/>
+
+              <!-- Front Face of Table Tent (White Paper) -->
+              <polygon points="40,32 114,32 105,160 32,160" fill="#FFFFFF" stroke="#111820" stroke-width="2.4" stroke-linejoin="round"/>
+
+              <!-- "Good Food Good Answers." text inside tent face -->
+              <text x="73" y="62" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12.5" fill="#111820">Good</text>
+              <text x="73" y="80" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12.5" fill="#111820">Food</text>
+              <text x="73" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12.5" fill="#111820">Good</text>
+              <text x="73" y="116" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12.5" fill="#111820">Answers.</text>
+
+              <!-- Handwritten Orange Smiley Face Icon -->
+              <circle cx="73" cy="138" r="8" fill="none" stroke="#F4512A" stroke-width="1.9"/>
+              <circle cx="70.5" cy="136" r="1.1" fill="#F4512A"/>
+              <circle cx="75.5" cy="136" r="1.1" fill="#F4512A"/>
+              <path d="M69.5 140 Q 73 144.5, 76.5 140" stroke="#F4512A" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+
+          <!-- Right Handwritten Doodle ("Still have a question? We're here!") -->
+          <div class="faq-doodle-right" aria-hidden="true">
+            <span class="faq-doodle-text-right">Still have<br />a question?<br />We're here!</span>
+            <svg class="faq-doodle-arrow-right" width="55" height="50" viewBox="0 0 55 50" fill="none">
+              <path d="M42 6 C 40 24, 28 38, 10 36" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <polyline points="20 42 8 36 14 24" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ACCORDION FAQ LIST SECTION
+         ============================================================ -->
+    <section class="faq-accordion-section">
+      <div class="faq-accordion-container">
+
+        <!-- Question 1 (Open by default in reference) -->
+        <div class="faq-acc-card open">
+          <button type="button" class="faq-acc-question-btn" aria-expanded="true">
+            <span>Is Menzo really free to use?</span>
+            <span class="faq-acc-icon">&mdash;</span>
+          </button>
+          <div class="faq-acc-answer-wrap">
+            <div class="faq-acc-answer-box">
+              <p class="faq-acc-answer-text">
+                Yes! You can create a menu, get a QR code and start using it for free. Upgrade anytime for more features.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-acc-card">
+          <button type="button" class="faq-acc-question-btn" aria-expanded="false">
+            <span>Do my customers need to download an app?</span>
+            <span class="faq-acc-icon">+</span>
+          </button>
+          <div class="faq-acc-answer-wrap">
+            <div class="faq-acc-answer-box">
+              <p class="faq-acc-answer-text">
+                No app download is needed. Customers simply scan the QR code using their smartphone camera, and your menu opens instantly in their mobile browser.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-acc-card">
+          <button type="button" class="faq-acc-question-btn" aria-expanded="false">
+            <span>How long does it take to set up?</span>
+            <span class="faq-acc-icon">+</span>
+          </button>
+          <div class="faq-acc-answer-wrap">
+            <div class="faq-acc-answer-box">
+              <p class="faq-acc-answer-text">
+                You can set up your complete digital menu in under 5 minutes. Simply add your restaurant details, create your food items with prices, and download your customized QR code.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-acc-card">
+          <button type="button" class="faq-acc-question-btn" aria-expanded="false">
+            <span>Can I customize the design?</span>
+            <span class="faq-acc-icon">+</span>
+          </button>
+          <div class="faq-acc-answer-wrap">
+            <div class="faq-acc-answer-box">
+              <p class="faq-acc-answer-text">
+                Yes! You can customize your brand logo, cover banner, primary colors, category layouts, dietary badges (veg/non-veg/vegan), and font styles to match your restaurant aesthetic.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-acc-card">
+          <button type="button" class="faq-acc-question-btn" aria-expanded="false">
+            <span>Can I update my menu later?</span>
+            <span class="faq-acc-icon">+</span>
+          </button>
+          <div class="faq-acc-answer-wrap">
+            <div class="faq-acc-answer-box">
+              <p class="faq-acc-answer-text">
+                Yes, you can edit prices, add new seasonal dishes, toggle item availability, and modify descriptions at any time. All updates reflect instantly on your live menu without needing a new QR code.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="faq-acc-card">
+          <button type="button" class="faq-acc-question-btn" aria-expanded="false">
+            <span>Is there a limit on menu items?</span>
+            <span class="faq-acc-icon">+</span>
+          </button>
+          <div class="faq-acc-answer-wrap">
+            <div class="faq-acc-answer-box">
+              <p class="faq-acc-answer-text">
+                The Free plan allows you to add all your essential dishes with photos. With our Pro and Business plans, you get unlimited menus, unlimited dishes, categories, and high-resolution photo uploads.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="faq-acc-card">
+          <button type="button" class="faq-acc-question-btn" aria-expanded="false">
+            <span>Do you offer support?</span>
+            <span class="faq-acc-icon">+</span>
+          </button>
+          <div class="faq-acc-answer-wrap">
+            <div class="faq-acc-answer-box">
+              <p class="faq-acc-answer-text">
+                Yes! We provide dedicated email and chat support to help you get started, optimize your QR codes, and assist with any menu design questions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BOTTOM BANNER / CTA SECTION
+         ============================================================ -->
+    <section class="faq-banner-section">
+      <div class="faq-banner-container">
+        <div class="faq-banner-card">
+
+          <!-- Left Handwritten Doodle -->
+          <div class="faq-banner-doodle-left" aria-hidden="true">
+            <span class="faq-banner-doodle-text">Still curious?<br />Let's build something<br />great.</span>
+            <svg class="faq-banner-doodle-arrow" width="60" height="42" viewBox="0 0 60 42" fill="none">
+              <path d="M10 6 C 14 24, 30 36, 50 32" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+              <polyline points="40 38 52 32 44 20" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- Center Content -->
+          <div class="faq-banner-content-center">
+            <h2 class="faq-banner-headline">Ready to get started?</h2>
+            <p class="faq-banner-subheadline">Create your menu in minutes. No hidden charges.</p>
+            <a href="/get-started.html" class="faq-banner-cta-btn">
+              Get Started Free &rarr;
+            </a>
+          </div>
+
+          <!-- Right Cloche Hand Illustration -->
+          <div class="faq-banner-cloche-right" aria-hidden="true">
+            <svg class="cloche-svg" width="165" height="135" viewBox="0 0 165 135" fill="none">
+              <!-- 3 Radiating White Rays -->
+              <line x1="32" y1="84" x2="10" y2="78" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+              <line x1="36" y1="96" x2="14" y2="104" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+              <line x1="46" y1="105" x2="32" y2="120" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+              
+              <!-- Cloche Dome & Platter Base -->
+              <path d="M28 100 Q 82 122 136 102" stroke="#111820" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M34 98 C 38 54, 110 60, 126 98 Z" fill="#F4512A" stroke="#111820" stroke-width="3.5" stroke-linejoin="round"/>
+              
+              <!-- Dome Reflection Line -->
+              <path d="M46 86 C 52 68, 72 62, 88 62" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              
+              <!-- Handle Knob -->
+              <circle cx="80" cy="52" r="7" fill="#F4512A" stroke="#111820" stroke-width="3.5"/>
+              
+              <!-- Arm / Sleeve with Black Outline -->
+              <path d="M124 96 C 132 92, 144 98, 150 106 C 156 114, 162 126, 165 135 L 122 135 C 120 122, 118 108, 124 96 Z" fill="#FFFFFF" stroke="#111820" stroke-width="3.5" stroke-linejoin="round"/>
+              <!-- Hand Finger Detail -->
+              <path d="M122 100 C 128 102, 138 108, 140 116" stroke="#111820" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer-wrapper">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="/" class="brand-logo footer-brand-logo" aria-label="Menzo Home">
+            <img src="/images/menzo-icon.png" alt="Menzo" class="brand-logo-img brand-logo-img--sm" />
+            <span class="brand-wordmark"><span class="brand-name">Menzo</span></span>
+          </a>
+          <p class="footer-tagline">Simple Menus. Happier Guests.</p>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links-list">
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/generator.html">Templates</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="/#features">About</a></li>
+            <li><a href="mailto:support@menzo.com">Contact</a></li>
+            <li><a href="/#features">Privacy</a></li>
+            <li><a href="/#features">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">&copy; 2025 Menzo. All rights reserved.</p>
+        <p class="footer-love">Made for the love of good food. <span class="heart-icon">&#10084;&#65039;</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/faq.js"></script>
+</body>
+</html>

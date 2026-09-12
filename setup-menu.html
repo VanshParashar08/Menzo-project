@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Step 3: Set Up Your Menu — Menzo</title>
+  <meta name="description" content="Add your dishes, prices, and photos. Real-time mobile menu preview for your restaurant." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/landing.css" />
+  <link rel="stylesheet" href="/src/styles/choose-plan.css" />
+  <link rel="stylesheet" href="/src/styles/setup-menu.css" />
+</head>
+<body class="onboarding-page-body">
+
+  <div class="onboarding-split-layout">
+    
+    <!-- ============================================================
+         LEFT SIDEBAR: STEPPER (Step 3 of 4)
+         ============================================================ -->
+    <aside class="onboarding-sidebar" aria-label="Onboarding Progress">
+      <div class="sidebar-header-area">
+        <!-- Menzo Brand Logo -->
+        <a href="/" class="sidebar-brand-logo" aria-label="Menzo Home">
+          <img src="/images/menzo-icon.png" alt="Menzo" class="sidebar-brand-icon" />
+          <span class="sidebar-brand-name">Menzo</span>
+        </a>
+
+        <!-- Step Heading -->
+        <div class="sidebar-step-meta">
+          <span class="step-counter-label">Step 3 of 4</span>
+          <h1 class="sidebar-step-title">Set up <span class="text-coral">your menu</span></h1>
+          <p class="sidebar-step-desc">Add your dishes, prices and photos. You can always edit later.</p>
+        </div>
+
+        <!-- 4-Step Vertical Stepper -->
+        <nav class="vertical-stepper" aria-label="Onboarding Steps">
+          <!-- Step 1: Completed -->
+          <div class="stepper-item is-completed">
+            <span class="stepper-badge stepper-badge--check" aria-label="Completed">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span class="stepper-label">Create account</span>
+          </div>
+
+          <!-- Step 2: Completed -->
+          <div class="stepper-item is-completed">
+            <span class="stepper-badge stepper-badge--check" aria-label="Completed">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </span>
+            <span class="stepper-label">Choose plan</span>
+          </div>
+
+          <!-- Step 3: Active -->
+          <div class="stepper-item is-active" aria-current="step">
+            <span class="stepper-badge stepper-badge--active">3</span>
+            <span class="stepper-label font-bold">Set up your menu</span>
+          </div>
+
+          <!-- Step 4: Pending -->
+          <div class="stepper-item is-pending">
+            <span class="stepper-badge stepper-badge--pending">4</span>
+            <span class="stepper-label">Go live</span>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Bottom Restaurant Food Photograph -->
+      <div class="sidebar-ambience-crop">
+        <img src="/images/onboarding_dish.png" alt="Fresh delicious restaurant dish" class="sidebar-food-image" />
+      </div>
+    </aside>
+
+    <!-- ============================================================
+         RIGHT MAIN CONTENT: DISH PICKER & LIVE PREVIEW
+         ============================================================ -->
+    <main class="setup-menu-main-panel">
+      <!-- Top Skip Bar -->
+      <div class="setup-top-bar">
+        <a href="/preview-golive.html" class="skip-for-now-btn">Skip for now</a>
+      </div>
+
+      <div class="setup-content-container">
+        
+        <!-- Left Section: Dish Selection Grid -->
+        <div class="dishes-selector-column">
+          <!-- Title & Subtitle -->
+          <div class="dishes-header-lockup">
+            <h2 class="dishes-main-title">Add your dishes</h2>
+            <p class="dishes-main-subtitle">Choose from 1,000+ authentic trained dishes, or add your own and set your custom prices.</p>
+          </div>
+
+          <!-- Dishes Search & Filter Bar -->
+          <div class="dishes-search-container">
+            <div class="dishes-search-bar">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="dishes-search-input" placeholder="Search 1,000+ dishes (e.g. Biryani, Butter Chicken, Dosa, Paneer, Chai)..." autocomplete="off" />
+              <button type="button" class="search-clear-btn" id="btn-clear-search" aria-label="Clear search" style="display: none;">&times;</button>
+            </div>
+            <span class="dishes-filter-count" id="dishes-filter-count">Popular (12)</span>
+          </div>
+
+          <!-- Category Filter Pills -->
+          <div class="category-pills-row" id="category-pills-row" role="tablist">
+            <button type="button" class="category-pill active" data-category="Popular" role="tab" aria-selected="true">Popular (12)</button>
+            <button type="button" class="category-pill" data-category="North Indian" role="tab" aria-selected="false">North Indian</button>
+            <button type="button" class="category-pill" data-category="Punjabi & Mughlai" role="tab" aria-selected="false">Punjabi &amp; Mughlai</button>
+            <button type="button" class="category-pill" data-category="Biryani & Rice" role="tab" aria-selected="false">Biryani &amp; Rice</button>
+            <button type="button" class="category-pill" data-category="South Indian" role="tab" aria-selected="false">South Indian</button>
+            <button type="button" class="category-pill" data-category="Indian Street Food" role="tab" aria-selected="false">Street Food</button>
+            <button type="button" class="category-pill" data-category="Indo-Chinese" role="tab" aria-selected="false">Indo-Chinese</button>
+            <button type="button" class="category-pill" data-category="Chaats & Snacks" role="tab" aria-selected="false">Chaats &amp; Snacks</button>
+            <button type="button" class="category-pill" data-category="Indian Breads" role="tab" aria-selected="false">Breads</button>
+            <button type="button" class="category-pill" data-category="Desserts & Mithai" role="tab" aria-selected="false">Desserts</button>
+            <button type="button" class="category-pill" data-category="Beverages" role="tab" aria-selected="false">Beverages</button>
+            <button type="button" class="category-pill pill-more" id="btn-all-categories" aria-label="All categories">All Categories ▾</button>
+          </div>
+
+          <!-- Extended Category Dropdown -->
+          <div class="all-categories-popover" id="all-categories-popover" style="display: none;">
+            <div class="popover-grid" id="popover-categories-list"></div>
+          </div>
+
+          <!-- Dishes Grid Container -->
+          <div class="dishes-grid" id="dishes-grid">
+            <!-- Dish 1: Paneer Tikka -->
+            <div class="dish-card is-added" data-id="paneer-tikka" data-name="Paneer Tikka" data-price="280" data-veg="true" data-img="/images/paneer_tikka.jpg" data-category="North Indian">
+              <div class="dish-img-wrap">
+                <img src="/images/paneer_tikka.jpg" alt="Paneer Tikka" class="dish-photo" />
+                <span class="dish-cat-tag">North Indian</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-name-row">
+                  <span class="dish-title">Paneer Tikka</span>
+                  <span class="diet-icon veg-icon" title="Vegetarian"><span class="dot"></span></span>
+                </div>
+                <div class="dish-price-edit-box" title="Click to customize price">
+                  <span class="price-currency">₹</span>
+                  <input type="number" class="dish-price-input" data-id="paneer-tikka" value="280" min="1" step="5" aria-label="Set price in ₹" />
+                  <span class="price-edit-pencil">✏️</span>
+                </div>
+                <button type="button" class="dish-add-btn added-state" data-action="toggle">
+                  <span class="check-icon">✓</span> <span class="add-text">Added</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dish 2: Butter Chicken -->
+            <div class="dish-card is-added" data-id="butter-chicken" data-name="Butter Chicken" data-price="320" data-veg="false" data-img="/images/butter_chicken.jpg" data-category="Punjabi & Mughlai">
+              <div class="dish-img-wrap">
+                <img src="/images/butter_chicken.jpg" alt="Butter Chicken" class="dish-photo" />
+                <span class="dish-cat-tag">Punjabi</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-name-row">
+                  <span class="dish-title">Butter Chicken</span>
+                  <span class="diet-icon non-veg-icon" title="Non-Vegetarian"><span class="triangle"></span></span>
+                </div>
+                <div class="dish-price-edit-box" title="Click to customize price">
+                  <span class="price-currency">₹</span>
+                  <input type="number" class="dish-price-input" data-id="butter-chicken" value="320" min="1" step="5" aria-label="Set price in ₹" />
+                  <span class="price-edit-pencil">✏️</span>
+                </div>
+                <button type="button" class="dish-add-btn added-state" data-action="toggle">
+                  <span class="check-icon">✓</span> <span class="add-text">Added</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dish 3: Masala Dosa -->
+            <div class="dish-card is-added" data-id="masala-dosa" data-name="Masala Dosa" data-price="110" data-veg="true" data-img="/images/masala_dosa.jpg" data-category="South Indian">
+              <div class="dish-img-wrap">
+                <img src="/images/masala_dosa.jpg" alt="Masala Dosa" class="dish-photo" />
+                <span class="dish-cat-tag">South Indian</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-name-row">
+                  <span class="dish-title">Masala Dosa</span>
+                  <span class="diet-icon veg-icon" title="Vegetarian"><span class="dot"></span></span>
+                </div>
+                <div class="dish-price-edit-box" title="Click to customize price">
+                  <span class="price-currency">₹</span>
+                  <input type="number" class="dish-price-input" data-id="masala-dosa" value="110" min="1" step="5" aria-label="Set price in ₹" />
+                  <span class="price-edit-pencil">✏️</span>
+                </div>
+                <button type="button" class="dish-add-btn added-state" data-action="toggle">
+                  <span class="check-icon">✓</span> <span class="add-text">Added</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dish 4: Veg Burger -->
+            <div class="dish-card is-added" data-id="veg-burger" data-name="Veg Burger" data-price="180" data-veg="true" data-img="/images/burger.jpg" data-category="Chaats & Snacks">
+              <div class="dish-img-wrap">
+                <img src="/images/burger.jpg" alt="Veg Burger" class="dish-photo" />
+                <span class="dish-cat-tag">Snacks</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-name-row">
+                  <span class="dish-title">Veg Burger</span>
+                  <span class="diet-icon veg-icon" title="Vegetarian"><span class="dot"></span></span>
+                </div>
+                <div class="dish-price-edit-box" title="Click to customize price">
+                  <span class="price-currency">₹</span>
+                  <input type="number" class="dish-price-input" data-id="veg-burger" value="180" min="1" step="5" aria-label="Set price in ₹" />
+                  <span class="price-edit-pencil">✏️</span>
+                </div>
+                <button type="button" class="dish-add-btn added-state" data-action="toggle">
+                  <span class="check-icon">✓</span> <span class="add-text">Added</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dish 5: French Fries -->
+            <div class="dish-card" data-id="french-fries" data-name="French Fries" data-price="120" data-veg="true" data-img="/images/french_fries.jpg" data-category="Chaats & Snacks">
+              <div class="dish-img-wrap">
+                <img src="/images/french_fries.jpg" alt="French Fries" class="dish-photo" />
+                <span class="dish-cat-tag">Snacks</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-name-row">
+                  <span class="dish-title">French Fries</span>
+                  <span class="diet-icon veg-icon" title="Vegetarian"><span class="dot"></span></span>
+                </div>
+                <div class="dish-price-edit-box" title="Click to customize price">
+                  <span class="price-currency">₹</span>
+                  <input type="number" class="dish-price-input" data-id="french-fries" value="120" min="1" step="5" aria-label="Set price in ₹" />
+                  <span class="price-edit-pencil">✏️</span>
+                </div>
+                <button type="button" class="dish-add-btn" data-action="toggle">
+                  <span class="add-icon">+</span> <span class="add-text">Add</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Dish 6: Cold Coffee -->
+            <div class="dish-card" data-id="cold-coffee" data-name="Cold Coffee" data-price="120" data-veg="true" data-img="/images/cold_coffee.jpg" data-category="Beverages">
+              <div class="dish-img-wrap">
+                <img src="/images/cold_coffee.jpg" alt="Cold Coffee" class="dish-photo" />
+                <span class="dish-cat-tag">Beverages</span>
+              </div>
+              <div class="dish-body">
+                <div class="dish-name-row">
+                  <span class="dish-title">Cold Coffee</span>
+                  <span class="diet-icon veg-icon" title="Vegetarian"><span class="dot"></span></span>
+                </div>
+                <div class="dish-price-edit-box" title="Click to customize price">
+                  <span class="price-currency">₹</span>
+                  <input type="number" class="dish-price-input" data-id="cold-coffee" value="120" min="1" step="5" aria-label="Set price in ₹" />
+                  <span class="price-edit-pencil">✏️</span>
+                </div>
+                <button type="button" class="dish-add-btn" data-action="toggle">
+                  <span class="add-icon">+</span> <span class="add-text">Add</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Custom Dish & Bulk Upload Actions -->
+          <div class="dishes-footer-actions">
+            <button type="button" class="action-card-btn" id="btn-add-custom">
+              <span class="action-icon-squircle">
+                <span class="plus-sign">+</span>
+              </span>
+              <div class="action-text">
+                <strong>Add Custom Dish</strong>
+                <span>Set your own dish name &amp; custom price</span>
+              </div>
+            </button>
+
+            <button type="button" class="action-card-btn" id="btn-bulk-upload">
+              <span class="action-icon-squircle squircle-slate">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </span>
+              <div class="action-text">
+                <strong>Bulk Upload</strong>
+                <span>Upload CSV or paste multiple dishes</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- Bottom Navigation Controls -->
+          <div class="setup-nav-bar">
+            <a href="/choose-plan.html" class="nav-back-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              <span>Back</span>
+            </a>
+
+            <div class="nav-right-actions">
+              <span class="nav-selection-badge" id="nav-selection-summary">4 dishes selected</span>
+              <a href="/preview-golive.html" class="nav-next-step-btn" id="btn-next-preview">
+                <span>Next: Preview</span>
+                <span class="btn-arrow">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Section: Live Mobile Phone Menu Preview -->
+        <aside class="phone-preview-column">
+          <div class="phone-preview-card-wrap">
+            <!-- Search bar at top -->
+            <div class="phone-preview-search">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" placeholder="Search dishes..." readonly class="preview-search-input" />
+            </div>
+
+            <!-- Mobile Phone Frame -->
+            <div class="smartphone-frame">
+              <div class="smartphone-screen">
+                <!-- Header -->
+                <div class="phone-brand-header">
+                  <img src="/images/menzo-icon.png" alt="Menzo" class="phone-header-logo" />
+                  <span class="phone-header-name">Menzo</span>
+                </div>
+
+                <div class="phone-restaurant-info">
+                  <h4 class="phone-rest-title" id="preview-rest-name">The Food Club</h4>
+                  <p class="phone-rest-tagline">Good Food. Good Mood.</p>
+                </div>
+
+                <!-- Chips -->
+                <div class="phone-chips-row">
+                  <span class="phone-chip active">All</span>
+                  <span class="phone-chip">Starters</span>
+                  <span class="phone-chip">Mains</span>
+                  <span class="phone-chip">Beverages</span>
+                </div>
+
+                <!-- Dishes List inside Phone -->
+                <div class="phone-dishes-list" id="phone-dishes-list">
+                  <!-- Paneer Tikka -->
+                  <div class="phone-dish-item" data-id="paneer-tikka">
+                    <img src="/images/paneer_tikka.jpg" alt="" class="phone-dish-thumb" />
+                    <div class="phone-dish-details">
+                      <span class="phone-dish-name">Paneer Tikka</span>
+                      <span class="phone-dish-price">₹280</span>
+                    </div>
+                    <span class="diet-icon veg-icon sm"><span class="dot"></span></span>
+                  </div>
+
+                  <!-- Butter Chicken -->
+                  <div class="phone-dish-item" data-id="butter-chicken">
+                    <img src="/images/butter_chicken.jpg" alt="" class="phone-dish-thumb" />
+                    <div class="phone-dish-details">
+                      <span class="phone-dish-name">Butter Chicken</span>
+                      <span class="phone-dish-price">₹320</span>
+                    </div>
+                    <span class="diet-icon non-veg-icon sm"><span class="triangle"></span></span>
+                  </div>
+
+                  <!-- Masala Dosa -->
+                  <div class="phone-dish-item" data-id="masala-dosa">
+                    <img src="/images/masala_dosa.jpg" alt="" class="phone-dish-thumb" />
+                    <div class="phone-dish-details">
+                      <span class="phone-dish-name">Masala Dosa</span>
+                      <span class="phone-dish-price">₹110</span>
+                    </div>
+                    <span class="diet-icon veg-icon sm"><span class="dot"></span></span>
+                  </div>
+
+                  <!-- Veg Burger -->
+                  <div class="phone-dish-item" data-id="veg-burger">
+                    <img src="/images/burger.jpg" alt="" class="phone-dish-thumb" />
+                    <div class="phone-dish-details">
+                      <span class="phone-dish-name">Veg Burger</span>
+                      <span class="phone-dish-price">₹180</span>
+                    </div>
+                    <span class="diet-icon veg-icon sm"><span class="dot"></span></span>
+                  </div>
+                </div>
+
+                <!-- Footer Tag -->
+                <div class="phone-menu-footer">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 2v20M6 2v20M6 12h12"></path>
+                  </svg>
+                  <span>Scan. Explore. Enjoy.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Handwritten Caveat Doodle Arrow -->
+            <div class="preview-doodle-hint" aria-hidden="true">
+              <svg class="preview-hint-arrow" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                <path d="M6 28 C2 18, 6 8, 18 6 C24 5, 28 6, 30 8" stroke="#5A6578" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+                <path d="M22 4 L30 8 L24 14" stroke="#5A6578" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>This is how your menu<br />will look</span>
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Modal: Add Custom Dish -->
+  <div class="menu-modal-overlay" id="modal-add-custom" aria-hidden="true" style="display: none;">
+    <div class="menu-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="custom-dish-modal-title">
+      <div class="modal-header">
+        <h3 id="custom-dish-modal-title" class="modal-title">Add Custom Dish</h3>
+        <button type="button" class="modal-close-btn" id="btn-close-custom-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <form id="form-add-custom-dish" class="modal-form">
+        <div class="form-group">
+          <label for="custom-dish-name">Dish Name *</label>
+          <input type="text" id="custom-dish-name" required placeholder="e.g. Chef's Special Malai Kofta" />
+        </div>
+        
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="custom-dish-category">Category</label>
+            <select id="custom-dish-category">
+              <!-- Populated dynamically with trained categories -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="custom-dish-price">Price (₹) *</label>
+            <div class="price-input-wrapper">
+              <span class="currency-tag">₹</span>
+              <input type="number" id="custom-dish-price" required min="1" step="5" value="220" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Dietary Type</label>
+          <div class="diet-radio-group">
+            <label class="diet-radio-label">
+              <input type="radio" name="custom-diet" value="veg" checked />
+              <span class="diet-icon veg-icon sm"><span class="dot"></span></span>
+              <span>Vegetarian (Veg)</span>
+            </label>
+            <label class="diet-radio-label">
+              <input type="radio" name="custom-diet" value="non-veg" />
+              <span class="diet-icon non-veg-icon sm"><span class="triangle"></span></span>
+              <span>Non-Vegetarian</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="modal-cancel-btn" id="btn-cancel-custom-modal">Cancel</button>
+          <button type="submit" class="modal-submit-btn">Add to Menu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Bulk Upload -->
+  <div class="menu-modal-overlay" id="modal-bulk-upload" aria-hidden="true" style="display: none;">
+    <div class="menu-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="bulk-modal-title">
+      <div class="modal-header">
+        <h3 id="bulk-modal-title" class="modal-title">Bulk Menu Upload</h3>
+        <button type="button" class="modal-close-btn" id="btn-close-bulk-modal" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-form">
+        <p class="modal-desc">Upload a CSV file or paste your dishes in <code>Dish Name, Category, Price</code> format.</p>
+        
+        <div class="bulk-dropzone" id="bulk-dropzone">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
+          <p>Drag &amp; drop your menu file here, or <span class="text-coral underline">browse files</span></p>
+          <span class="file-types-hint">Supports CSV, Excel, TXT</span>
+          <input type="file" id="bulk-file-input" accept=".csv,.txt,.xlsx" style="display: none;" />
+        </div>
+
+        <div class="bulk-quick-actions">
+          <span class="quick-title">Or auto-import curated regional sets:</span>
+          <div class="quick-import-chips">
+            <button type="button" class="quick-chip-btn" data-preset="street-food">+ Indian Street Food (15 dishes)</button>
+            <button type="button" class="quick-chip-btn" data-preset="north-indian">+ North Indian Classics (15 dishes)</button>
+            <button type="button" class="quick-chip-btn" data-preset="south-indian">+ South Indian Tiffin (12 dishes)</button>
+            <button type="button" class="quick-chip-btn" data-preset="beverages">+ Cafe &amp; Beverages (12 dishes)</button>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="modal-cancel-btn" id="btn-cancel-bulk-modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="setup-toast" id="setup-toast" role="alert" aria-live="polite"></div>
+
+  <script type="module" src="/src/setup-menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+/* ============================================================
+   MENZO GET STARTED / SIGNUP PAGE STYLESHEET
+   Reference: exact uploaded signup page design (media_1789200378921.jpg)
+   Colors: Coral #F4512A | Dark #111820 | Light Gray #E5E7EB | Muted #6B7280
+   ============================================================ */
+
+/* Page container */
+.get-started-body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: var(--color-dark);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.get-started-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ------------------------------------------------------------
+   LEFT PANEL: VISUAL SHOWCASE & RESTAURANT AMBIENCE
+   ------------------------------------------------------------ */
+.get-started-showcase-panel {
+  flex: 1;
+  max-width: 50%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #1A1715;
+  overflow: hidden;
+}
+
+.showcase-inner-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.showcase-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ------------------------------------------------------------
+   RIGHT PANEL: ACCOUNT CREATION FORM
+   ------------------------------------------------------------ */
+.get-started-form-panel {
+  flex: 1;
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 36px 56px 20px;
+  position: relative;
+  overflow-y: auto;
+}
+
+/* Top bar with Log In */
+.form-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.already-account-text {
+  font-size: 13.5px;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.top-login-btn {
+  border: 1.5px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-dark);
+  text-decoration: none;
+  background-color: #FFFFFF;
+  transition: all 0.18s ease;
+}
+
+.top-login-btn:hover {
+  border-color: #CBD5E1;
+  background-color: #F9FAFB;
+}
+
+/* Main Form Content Container */
+.form-content-container {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+}
+
+/* Brand Lockup */
+.form-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-bottom: 18px;
+}
+
+.form-brand-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  object-fit: contain;
+}
+
+.form-brand-name {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--color-dark);
+  letter-spacing: -0.5px;
+}
+
+/* Title & Subtitle */
+.form-header-text {
+  margin-bottom: 24px;
+}
+
+.form-main-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--color-dark);
+  letter-spacing: -0.8px;
+  line-height: 1.15;
+  margin: 0 0 6px 0;
+}
+
+.form-main-subtitle {
+  font-size: 15px;
+  color: #6B7280;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Registration Form */
+.restaurant-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.form-input-text {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--color-dark);
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.form-input-text::placeholder {
+  color: #9CA3AF;
+}
+
+.form-input-text:focus {
+  outline: none;
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px rgba(244, 81, 42, 0.12);
+}
+
+/* Composite Phone Input */
+.phone-input-composite {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 0 12px;
+  background-color: #FFFFFF;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.phone-input-composite:focus-within {
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px rgba(244, 81, 42, 0.12);
+}
+
+.country-code-picker {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.flag-icon {
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.chevron-icon {
+  display: block;
+}
+
+.country-prefix {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-left: 2px;
+}
+
+.form-input-phone {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--color-dark);
+  font-family: inherit;
+  background: transparent;
+  padding: 0;
+}
+
+.form-input-phone::placeholder {
+  color: #9CA3AF;
+}
+
+/* Composite Password Input */
+.password-input-composite {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+.password-input-composite:focus-within {
+  border-color: var(--color-orange);
+  box-shadow: 0 0 0 3px rgba(244, 81, 42, 0.12);
+}
+
+.form-input-password {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 14px;
+  font-size: 14px;
+  color: var(--color-dark);
+  font-family: inherit;
+  background: transparent;
+}
+
+.form-input-password::placeholder {
+  color: #9CA3AF;
+}
+
+.password-toggle-btn {
+  background: none;
+  border: none;
+  padding: 0 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6B7280;
+  transition: color 0.15s ease;
+}
+
+.password-toggle-btn:hover {
+  color: var(--color-dark);
+}
+
+/* Validation error messaging */
+.field-error-msg {
+  font-size: 11.5px;
+  color: #EF4444;
+  display: none;
+  margin-top: 1px;
+}
+
+.has-error .field-error-msg {
+  display: block;
+}
+
+.has-error .form-input-text,
+.has-error .phone-input-composite,
+.has-error .password-input-composite {
+  border-color: #EF4444 !important;
+}
+
+/* Primary CTA Button */
+.submit-create-account-btn {
+  width: 100%;
+  height: 46px;
+  background-color: var(--color-orange);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 14px rgba(244, 81, 42, 0.25);
+  font-family: inherit;
+}
+
+.submit-create-account-btn:hover {
+  background-color: #E24823;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(244, 81, 42, 0.35);
+}
+
+.submit-arrow {
+  font-size: 16px;
+  transition: transform 0.15s ease;
+}
+
+.submit-create-account-btn:hover .submit-arrow {
+  transform: translateX(3px);
+}
+
+/* Divider line */
+.auth-divider-line {
+  display: flex;
+  align-items: center;
+  margin: 18px 0;
+  text-align: center;
+}
+
+.auth-divider-line::before,
+.auth-divider-line::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+.auth-divider-text {
+  padding: 0 12px;
+  font-size: 12px;
+  color: #9CA3AF;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+/* Social Buttons Row */
+.social-auth-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.social-auth-btn {
+  flex: 1;
+  height: 42px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font-family: inherit;
+}
+
+.social-auth-btn:hover {
+  border-color: #CBD5E1;
+  background-color: #F9FAFB;
+}
+
+.social-btn-icon {
+  flex-shrink: 0;
+}
+
+/* Legal Notice */
+.terms-privacy-notice {
+  font-size: 11.5px;
+  color: #6B7280;
+  line-height: 1.45;
+  text-align: left;
+  margin: 0;
+}
+
+.legal-link {
+  color: #4B5563;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+
+.legal-link:hover {
+  color: var(--color-orange);
+}
+
+/* Bottom Decorative Area */
+.bottom-decorative-area {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  margin-top: 15px;
+  pointer-events: none;
+}
+
+.bottom-blob-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(28px);
+  opacity: 0.65;
+}
+
+.blob-shape-right {
+  right: -25px;
+  bottom: -35px;
+  width: 170px;
+  height: 170px;
+  background-color: #FBDDD0;
+  filter: blur(32px);
+}
+
+.blob-shape-left {
+  left: -40px;
+  bottom: -40px;
+  width: 120px;
+  height: 120px;
+  background-color: #FDEEE5;
+  filter: blur(30px);
+}
+
+.bottom-doodle-lockup {
+  position: absolute;
+  right: 28px;
+  bottom: 12px;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  z-index: 3;
+}
+
+.doodle-arrow-svg {
+  transform: rotate(-10deg);
+  margin-bottom: 6px;
+}
+
+.bottom-doodle-text {
+  font-family: 'Caveat', cursive;
+  font-size: 21px;
+  font-weight: 700;
+  color: #D64620;
+  line-height: 1.05;
+  transform: rotate(4deg);
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   ------------------------------------------------------------ */
+@media (max-width: 960px) {
+  .get-started-layout {
+    flex-direction: column;
+  }
+  .get-started-showcase-panel {
+    max-width: 100%;
+    min-height: 380px;
+    max-height: 460px;
+  }
+  .get-started-form-panel {
+    padding: 32px 24px 24px;
+  }
+  .bottom-decorative-area {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-auth-row {
+    flex-direction: column;
+  }
+  .form-main-title {
+    font-size: 30px;
+  }
+  .get-started-form-panel {
+    padding: 24px 16px 20px;
+  }
+}

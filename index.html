@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menzo — Good food deserves a better menu</title>
+  <meta name="description" content="Create beautiful digital menus for your restaurant in minutes. No app needed. Just a QR code." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/landing.css" />
+</head>
+<body>
+
+  <header class="navbar-wrapper">
+    <div class="navbar-container">
+      <a href="/" class="brand-logo" aria-label="Menzo Home">
+        <img src="/images/menzo-icon.png" alt="Menzo" class="brand-logo-img" />
+        <span class="brand-wordmark"><span class="brand-name">Menzo</span></span>
+      </a>
+      <nav class="nav-menu-desktop" aria-label="Main Navigation">
+        <a href="/features.html" class="nav-item">Features</a>
+        <a href="/pricing.html" class="nav-item">Pricing</a>
+        <a href="#restaurants" class="nav-item">For Restaurants</a>
+        <a href="/faq.html" class="nav-item">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="/generator.html" class="nav-login-btn">Log in</a>
+        <a href="/get-started.html" class="nav-cta-btn">Get Started</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-drawer" id="mobile-menu">
+      <nav class="mobile-nav-links">
+        <a href="/features.html" class="mobile-nav-item">Features</a>
+        <a href="/pricing.html" class="mobile-nav-item">Pricing</a>
+        <a href="#restaurants" class="mobile-nav-item">For Restaurants</a>
+        <a href="/faq.html" class="mobile-nav-item">FAQ</a>
+        <div class="mobile-nav-divider"></div>
+        <a href="/generator.html" class="mobile-nav-login">Log in</a>
+        <a href="/get-started.html" class="mobile-nav-cta">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section" id="features">
+      <div class="hero-container">
+        <div class="hero-left-content">
+          <h1 class="hero-title">
+            Good food<br />
+            deserves a<br />
+            <span class="highlight-orange">better menu.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Create beautiful digital menus for your restaurant in minutes. No app needed. Just a QR code.
+          </p>
+          <div class="hero-cta-group">
+            <a href="/get-started.html" class="btn-primary-pill">Get Started Free <span class="btn-arrow">&#8594;</span></a>
+            <a href="#showcase" class="btn-secondary-pill">See a Live Menu</a>
+          </div>
+          <div class="hero-perks">
+            <div class="perk-item">
+              <span class="perk-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </span>
+              <span class="perk-text">No coding<br />required</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+              </span>
+              <span class="perk-text">Free plan<br />available</span>
+            </div>
+            <div class="perk-item">
+              <span class="perk-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </span>
+              <span class="perk-text">Setup in<br />under 5 minutes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right-illustration">
+          <div class="hero-orange-blob"></div>
+
+          <div class="doodle-scan-order">
+            <span class="doodle-scan-text">Scan.<br />Order.<br />Enjoy.</span>
+            <svg width="20" height="36" viewBox="0 0 20 36" fill="none">
+              <line x1="3" y1="4" x2="18" y2="2" stroke="#F4512A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="2" y1="18" x2="18" y2="18" stroke="#F4512A" stroke-width="2" stroke-linecap="round"/>
+              <line x1="3" y1="32" x2="18" y2="34" stroke="#F4512A" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <svg class="hero-plant-svg" width="155" height="210" viewBox="0 0 155 210" fill="none">
+            <path d="M75 210 C76 180 77 145 78 95" stroke="#111820" stroke-width="4.5" stroke-linecap="round"/>
+            <path d="M76 165 C62 148 40 140 22 122" stroke="#111820" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M77 148 C92 133 118 128 135 108" stroke="#111820" stroke-width="3.5" stroke-linecap="round"/>
+            <path d="M76 162 C52 152 18 162 12 138 C17 118 52 140 76 158 Z" fill="#111820"/>
+            <path d="M77 145 C100 134 138 148 142 126 C140 108 102 128 77 142 Z" fill="#111820"/>
+            <path d="M78 118 C92 100 128 102 132 82 C128 66 94 88 78 115 Z" fill="#111820"/>
+            <ellipse cx="78" cy="50" rx="13" ry="22" fill="#F4512A"/>
+            <ellipse cx="58" cy="62" rx="12" ry="16" transform="rotate(-30 58 62)" fill="#F4512A"/>
+            <ellipse cx="98" cy="62" rx="12" ry="16" transform="rotate(30 98 62)" fill="#F4512A"/>
+          </svg>
+
+          <div class="qr-stand-perspective">
+            <div class="stand-front-face">
+              <div class="stand-header">
+                <span class="stand-brand-name">Menzo</span>
+              </div>
+              <div class="stand-qr-box">
+                <span class="qr-corner top-left"></span>
+                <span class="qr-corner top-right"></span>
+                <span class="qr-corner bottom-left"></span>
+                <span class="qr-corner bottom-right"></span>
+                <svg class="qr-vector" width="128" height="128" viewBox="0 0 128 128" fill="none">
+                  <!-- Finder TL -->
+                  <rect x="8" y="8" width="32" height="32" rx="3.5" stroke="#111820" stroke-width="4.5"/>
+                  <rect x="17" y="17" width="14" height="14" rx="1.5" fill="#111820"/>
+                  <!-- Finder TR -->
+                  <rect x="88" y="8" width="32" height="32" rx="3.5" stroke="#111820" stroke-width="4.5"/>
+                  <rect x="97" y="17" width="14" height="14" rx="1.5" fill="#111820"/>
+                  <!-- Finder BL -->
+                  <rect x="8" y="88" width="32" height="32" rx="3.5" stroke="#111820" stroke-width="4.5"/>
+                  <rect x="17" y="97" width="14" height="14" rx="1.5" fill="#111820"/>
+                  
+                  <!-- Timing / Top data -->
+                  <rect x="48" y="10" width="6" height="6" fill="#111820"/>
+                  <rect x="60" y="10" width="6" height="6" fill="#111820"/>
+                  <rect x="72" y="10" width="6" height="6" fill="#111820"/>
+                  <rect x="80" y="10" width="6" height="6" fill="#111820"/>
+                  
+                  <rect x="48" y="22" width="8" height="8" fill="#111820"/>
+                  <rect x="62" y="22" width="8" height="6" fill="#111820"/>
+                  <rect x="76" y="22" width="6" height="6" fill="#111820"/>
+                  
+                  <rect x="48" y="34" width="6" height="6" fill="#111820"/>
+                  <rect x="60" y="34" width="10" height="6" fill="#111820"/>
+                  <rect x="76" y="34" width="6" height="6" fill="#111820"/>
+                  
+                  <!-- Left data column -->
+                  <rect x="12" y="48" width="8" height="8" fill="#111820"/>
+                  <rect x="26" y="48" width="6" height="6" fill="#111820"/>
+                  <rect x="38" y="48" width="5" height="8" fill="#111820"/>
+                  
+                  <rect x="12" y="60" width="6" height="14" fill="#111820"/>
+                  <rect x="24" y="60" width="8" height="8" fill="#111820"/>
+                  <rect x="36" y="60" width="6" height="14" fill="#111820"/>
+                  
+                  <rect x="14" y="78" width="6" height="6" fill="#111820"/>
+                  <rect x="26" y="78" width="8" height="6" fill="#111820"/>
+                  
+                  <!-- Right data columns -->
+                  <rect x="86" y="48" width="8" height="8" fill="#111820"/>
+                  <rect x="98" y="48" width="14" height="6" fill="#111820"/>
+                  
+                  <rect x="86" y="60" width="6" height="8" fill="#111820"/>
+                  <rect x="98" y="60" width="16" height="6" fill="#111820"/>
+                  
+                  <rect x="86" y="72" width="12" height="8" fill="#111820"/>
+                  <rect x="104" y="72" width="8" height="8" fill="#111820"/>
+                  
+                  <rect x="86" y="84" width="6" height="6" fill="#111820"/>
+                  <rect x="98" y="84" width="12" height="6" fill="#111820"/>
+                  
+                  <!-- Center Logo (B&W icon without text, with crisp white clearance frame) -->
+                  <rect x="43" y="43" width="42" height="42" rx="7" fill="#FFFFFF"/>
+                  <image href="/images/menzo-icon-bw.png" xlink:href="/images/menzo-icon-bw.png" x="45" y="45" width="38" height="38" preserveAspectRatio="xMidYMid meet"/>
+                  
+                  <!-- Bottom data rows -->
+                  <rect x="48" y="92" width="8" height="6" fill="#111820"/>
+                  <rect x="62" y="92" width="14" height="6" fill="#111820"/>
+                  <rect x="82" y="92" width="8" height="6" fill="#111820"/>
+                  
+                  <rect x="48" y="102" width="6" height="8" fill="#111820"/>
+                  <rect x="60" y="102" width="8" height="8" fill="#111820"/>
+                  <rect x="74" y="102" width="8" height="8" fill="#111820"/>
+                  <rect x="88" y="102" width="6" height="8" fill="#111820"/>
+                  <rect x="100" y="102" width="14" height="8" fill="#111820"/>
+                  
+                  <rect x="48" y="114" width="14" height="6" fill="#111820"/>
+                  <rect x="70" y="114" width="8" height="6" fill="#111820"/>
+                  <rect x="84" y="114" width="14" height="6" fill="#111820"/>
+                  <rect x="104" y="114" width="8" height="6" fill="#111820"/>
+                </svg>
+              </div>
+
+              <div class="stand-actions-row">
+                <div class="stand-action-unit">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"></path><path d="M15 11v11"></path><path d="M6 2v20"></path><path d="M6 2a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4"></path></svg>
+                  <span>View Menu</span>
+                </div>
+                <div class="stand-action-unit">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Explore</span>
+                </div>
+                <div class="stand-action-unit">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                  <span>Enjoy</span>
+                </div>
+              </div>
+            </div>
+            <div class="stand-side-fold"></div>
+          </div>
+
+          <div class="doodle-turn-tables">
+            <span class="doodle-tables-text">Turn<br />tables into<br />great<br />experiences.</span>
+            <svg class="doodle-arrow-curved" width="55" height="65" viewBox="0 0 55 65" fill="none">
+              <path d="M44 6 C40 24, 28 42, 10 54" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <polyline points="18 44 9 55 17 62" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works-section" id="how-it-works">
+      <div class="section-container">
+        <div class="section-heading-wrap">
+          <span class="section-badge-orange">HOW IT WORKS</span>
+          <h2 class="section-main-title">From QR to Cravings in 3 Steps</h2>
+        </div>
+        <div class="steps-flow-row">
+          <div class="step-card-unit">
+            <div class="step-number-circle">1</div>
+            <div class="step-icon-peach-card">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="12" y="5" width="24" height="38" rx="5"></rect>
+                <rect x="17" y="13" width="5" height="5" stroke-width="1.8"></rect>
+                <rect x="26" y="13" width="5" height="5" stroke-width="1.8"></rect>
+                <rect x="17" y="20" width="5" height="5" stroke-width="1.8"></rect>
+                <line x1="26" y1="21" x2="30" y2="21"></line>
+                <line x1="26" y1="24" x2="30" y2="24"></line>
+                <line x1="20" y1="36" x2="28" y2="36"></line>
+              </svg>
+            </div>
+            <h3 class="step-title">Create Your Menu</h3>
+            <p class="step-desc">Add your dishes, photos and<br />prices in a few clicks.</p>
+          </div>
+
+          <div class="step-connector-arrow" aria-hidden="true">
+            <svg width="32" height="16" viewBox="0 0 32 16" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="2" y1="8" x2="28" y2="8"></line>
+              <polyline points="22 2 28 8 22 14"></polyline>
+            </svg>
+          </div>
+
+          <div class="step-card-unit">
+            <div class="step-number-circle">2</div>
+            <div class="step-icon-peach-card">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#111820" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="8" width="13" height="13" rx="2.5"></rect>
+                <rect x="27" y="8" width="13" height="13" rx="2.5"></rect>
+                <rect x="8" y="27" width="13" height="13" rx="2.5"></rect>
+                <rect x="28" y="28" width="4" height="4" fill="#111820" stroke="none"></rect>
+                <rect x="35" y="28" width="4" height="4" fill="#111820" stroke="none"></rect>
+                <rect x="28" y="35" width="4" height="4" fill="#111820" stroke="none"></rect>
+                <rect x="35" y="35" width="4" height="4" fill="#111820" stroke="none"></rect>
+              </svg>
+            </div>
+            <h3 class="step-title">Get Your QR Code</h3>
+            <p class="step-desc">Download and place it on<br />your tables, walls or bills.</p>
+          </div>
+
+          <div class="step-connector-arrow" aria-hidden="true">
+            <svg width="32" height="16" viewBox="0 0 32 16" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="2" y1="8" x2="28" y2="8"></line>
+              <polyline points="22 2 28 8 22 14"></polyline>
+            </svg>
+          </div>
+
+          <div class="step-card-unit">
+            <div class="step-number-circle">3</div>
+            <div class="step-icon-peach-card">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="13" y="5" width="22" height="38" rx="5"></rect>
+                <line x1="21" y1="37" x2="27" y2="37"></line>
+              </svg>
+            </div>
+            <h3 class="step-title">Customers Scan &amp; Explore</h3>
+            <p class="step-desc">They open your menu instantly<br />&#8212; no app needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-showcase-section" id="showcase">
+      <div class="showcase-container">
+        <div class="showcase-phone-wrapper">
+          <div class="doodle-looks-good">
+            <span class="doodle-tastes-text">Looks good.<br />Tastes better.</span>
+            <svg class="looks-good-arrow" width="52" height="48" viewBox="0 0 52 48" fill="none">
+              <path d="M8 10 C12 28, 24 36, 44 40" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <polyline points="34 44 46 40 38 30" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="corner-doodle bottom-left-rays">
+            <svg width="70" height="55" viewBox="0 0 70 55" fill="none">
+              <line x1="5" y1="50" x2="60" y2="6" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="18" y1="52" x2="66" y2="20" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="2" y1="34" x2="44" y2="2" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="corner-doodle bottom-right-rays">
+            <svg width="70" height="55" viewBox="0 0 70 55" fill="none">
+              <line x1="10" y1="8" x2="64" y2="48" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="2" y1="22" x2="50" y2="52" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="22" y1="2" x2="66" y2="32" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <div class="tilted-phone-frame">
+            <div class="phone-screen-content">
+              <div class="phone-status-bar">
+                <span class="status-time">9:41</span>
+                <div class="status-notch"></div>
+                <div class="status-icons">
+                  <svg width="12" height="10" viewBox="0 0 16 12" fill="#111820"><rect x="1" y="9" width="2.5" height="3" rx="0.5"></rect><rect x="5" y="6.5" width="2.5" height="5.5" rx="0.5"></rect><rect x="9" y="3.5" width="2.5" height="8.5" rx="0.5"></rect><rect x="13" y="0.5" width="2.5" height="11.5" rx="0.5"></rect></svg>
+                  <svg width="12" height="10" viewBox="0 0 16 12" fill="none" stroke="#111820" stroke-width="1.8"><path d="M1 3a13 13 0 0 1 14 0M3.5 6.5a9 9 0 0 1 9 0M6 10a4 4 0 0 1 4 0"></path></svg>
+                  <svg width="18" height="10" viewBox="0 0 22 12" fill="none" stroke="#111820" stroke-width="1.5"><rect x="1" y="1" width="17" height="10" rx="3"></rect><rect x="3" y="3" width="11" height="6" rx="1.5" fill="#111820"></rect><path d="M20 4v4" stroke-linecap="round"></path></svg>
+                </div>
+              </div>
+              <div class="phone-rest-header">
+                <div class="phone-rest-icon-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"></path><path d="M15 11v11"></path><path d="M6 2v20"></path><path d="M6 2a4 4 0 0 1 4 4v3a4 4 0 0 1-4 4"></path></svg>
+                </div>
+                <h4 class="phone-rest-name">The Food Club</h4>
+                <p class="phone-rest-tagline">Good Food. Good Mood.</p>
+              </div>
+              <div class="phone-category-pills">
+                <button class="mockup-cat-pill active" data-cat="all">All</button>
+                <button class="mockup-cat-pill" data-cat="starters">Starters</button>
+                <button class="mockup-cat-pill" data-cat="mains">Mains</button>
+                <button class="mockup-cat-pill" data-cat="desserts">Desserts</button>
+              </div>
+              <div class="phone-dish-list">
+                <div class="mockup-dish-row" data-cat="starters">
+                  <img src="/images/paneer_tikka.jpg" alt="Paneer Tikka" class="dish-thumb" />
+                  <div class="dish-meta">
+                    <span class="dish-title">Paneer Tikka</span>
+                    <span class="dish-price">&#8377;220</span>
+                  </div>
+                  <button class="dish-add-btn" aria-label="Add Paneer Tikka">+</button>
+                </div>
+                <div class="mockup-dish-row" data-cat="mains">
+                  <img src="/images/pizza.jpg" alt="Margherita Pizza" class="dish-thumb" />
+                  <div class="dish-meta">
+                    <span class="dish-title">Margherita Pizza</span>
+                    <span class="dish-price">&#8377;320</span>
+                  </div>
+                  <button class="dish-add-btn" aria-label="Add Margherita Pizza">+</button>
+                </div>
+                <div class="mockup-dish-row" data-cat="mains">
+                  <img src="/images/pasta.jpg" alt="Pasta Alfredo" class="dish-thumb" />
+                  <div class="dish-meta">
+                    <span class="dish-title">Pasta Alfredo</span>
+                    <span class="dish-price">&#8377;280</span>
+                  </div>
+                  <button class="dish-add-btn" aria-label="Add Pasta Alfredo">+</button>
+                </div>
+                <div class="mockup-dish-row" data-cat="desserts">
+                  <img src="/images/choco_lava_cake.jpg" alt="Chocolate Lava Cake" class="dish-thumb" />
+                  <div class="dish-meta">
+                    <span class="dish-title">Chocolate Lava Cake</span>
+                    <span class="dish-price">&#8377;250</span>
+                  </div>
+                  <button class="dish-add-btn" aria-label="Add Chocolate Lava Cake">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="showcase-copy-wrapper">
+          <span class="showcase-label-white">BEAUTIFUL MENUS</span>
+          <h2 class="showcase-main-title">
+            Menus that<br />
+            make people<br />
+            hungry.<span class="hungry-rays-wrap"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><line x1="5" y1="16" x2="22" y2="6" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round"/><line x1="5" y1="22" x2="26" y2="18" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round"/><line x1="12" y1="26" x2="26" y2="26" stroke="#FFFFFF" stroke-width="2.8" stroke-linecap="round"/></svg></span>
+          </h2>
+          <ul class="showcase-checklist">
+            <li class="checklist-item"><span class="check-circle-white"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Beautiful, modern templates</span></li>
+            <li class="checklist-item"><span class="check-circle-white"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Add photos, descriptions and prices</span></li>
+            <li class="checklist-item"><span class="check-circle-white"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Update anytime, instantly</span></li>
+            <li class="checklist-item"><span class="check-circle-white"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Works on all smartphones</span></li>
+            <li class="checklist-item"><span class="check-circle-white"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span><span>Perfect for caf&#233;s, restaurants, cloud kitchens and more</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="business-types-section" id="restaurants">
+      <div class="section-container">
+        <div class="section-heading-wrap">
+          <span class="section-badge-orange">BUILT FOR EVERY FOOD BUSINESS</span>
+          <h2 class="section-main-title">Good for every table.</h2>
+        </div>
+        <div class="business-cards-grid">
+          <div class="business-card">
+            <div class="biz-icon-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <h3 class="biz-card-title">Caf&#233;s</h3>
+            <p class="biz-card-desc">Showcase your<br />beverages &amp; bites</p>
+          </div>
+          <div class="business-card">
+            <div class="biz-icon-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            <h3 class="biz-card-title">Restaurants</h3>
+            <p class="biz-card-desc">Full menus,<br />beautifully displayed</p>
+          </div>
+          <div class="business-card">
+            <div class="biz-icon-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+            </div>
+            <h3 class="biz-card-title">Cloud Kitchens</h3>
+            <p class="biz-card-desc">Digital menus for<br />delivery &amp; pickup</p>
+          </div>
+          <div class="business-card">
+            <div class="biz-icon-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 11h1a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3h-1"></path><path d="M5 8h12v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8z"></path><path d="M5 8a3 3 0 0 1 3-3 3 3 0 0 1 3 3"></path><path d="M11 8a3 3 0 0 1 3-3 3 3 0 0 1 3 3"></path></svg>
+            </div>
+            <h3 class="biz-card-title">Bars &amp; Pubs</h3>
+            <p class="biz-card-desc">Drinks, food<br />and good vibes</p>
+          </div>
+          <div class="business-card">
+            <div class="biz-icon-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="5" width="15" height="13" rx="2"></rect><polygon points="16 8 20 8 23 11 23 18 16 18 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle><line x1="5" y1="10" x2="11" y2="10"></line></svg>
+            </div>
+            <h3 class="biz-card-title">Food Trucks</h3>
+            <p class="biz-card-desc">Take your menu<br />anywhere</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section" id="pricing">
+      <div class="section-container">
+        <div class="cta-banner-container">
+          <div class="cta-doodle-left">
+            <span class="cta-free-text">Start today.<br />It's free!</span>
+            <svg class="cta-curved-arrow" width="54" height="36" viewBox="0 0 54 36" fill="none">
+              <path d="M6 6 C14 22, 30 28, 50 22" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <polyline points="40 15 50 22 42 30" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="cta-center-content">
+            <h2 class="cta-banner-title">Ready to Go Digital?</h2>
+            <p class="cta-banner-subtitle">Join hundreds of restaurants already using Menzo.</p>
+            <a href="/get-started.html" class="btn-cta-white">Get Started Free <span class="cta-arrow">&#8594;</span></a>
+          </div>
+          <div class="cta-cloche-illustration">
+            <svg class="cloche-svg" width="150" height="130" viewBox="0 0 150 130" fill="none">
+              <line x1="30" y1="78" x2="10" y2="74" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+              <line x1="34" y1="88" x2="14" y2="96" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+              <line x1="44" y1="95" x2="32" y2="108" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+              <path d="M28 95 Q80 118 132 100" stroke="#111820" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M32 93 C36 52, 106 58, 122 94 Z" fill="#F4512A" stroke="#111820" stroke-width="3.5" stroke-linejoin="round"/>
+              <circle cx="77" cy="50" r="7" fill="#F4512A" stroke="#111820" stroke-width="3.5"/>
+              <path d="M120 92 C128 88, 140 94, 144 100 C148 106, 150 118, 150 125 L112 125 C114 112, 112 100, 120 92 Z" fill="#FFFFFF" stroke="#111820" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M118 96 C124 98, 132 103, 134 110" stroke="#111820" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-wrapper" id="faq">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="/" class="brand-logo footer-brand-logo" aria-label="Menzo Home">
+            <img src="/images/menzo-icon.png" alt="Menzo" class="brand-logo-img brand-logo-img--sm" />
+            <span class="brand-wordmark"><span class="brand-name">Menzo</span></span>
+          </a>
+          <p class="footer-tagline">Simple Menus. Happier Guests.</p>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links-list">
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/generator.html">Templates</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="#features">About</a></li>
+            <li><a href="/generator.html">Contact</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+            <li><a href="#terms">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" class="social-icon-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#111820"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-icon-btn">
+              <svg width="22" height="16" viewBox="0 0 24 18" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 2.42A2.78 2.78 0 0 0 20.6.46C18.88 0 12 0 12 0s-6.88 0-8.6.46A2.78 2.78 0 0 0 1.46 2.42 29 29 0 0 0 1 8.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 16.04c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.29 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 12.52 15.5 8.75 9.75 4.98 9.75 12.52" fill="#111820"></polygon></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <p class="footer-copyright">&#169; 2025 Menzo. All rights reserved.</p>
+        <p class="footer-love">Made for the love of good food. &#10084;&#65039;</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/landing.js"></script>
+</body>
+</html>

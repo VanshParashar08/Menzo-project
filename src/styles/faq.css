@@ -1,0 +1,365 @@
+/* ============================================================
+   MENZO FAQ PAGE STYLESHEET
+   Reference: exact uploaded FAQ page design (media_1789198650977.jpg)
+   ============================================================ */
+
+/* Page background */
+.faq-page-body {
+  background-color: var(--color-cream-bg, #FFF8F1);
+  color: var(--color-dark, #111820);
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Active tab indicator in navbar for FAQ */
+.nav-item--active-faq {
+  color: var(--color-orange, #F4512A) !important;
+  font-weight: 700 !important;
+  position: relative;
+}
+.nav-item--active-faq::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 2px;
+  background-color: var(--color-orange, #F4512A);
+  border-radius: 2px;
+}
+
+/* ============================================================
+   1. FAQ HERO SECTION
+   ============================================================ */
+.faq-hero-section {
+  padding: 44px 24px 36px;
+  position: relative;
+}
+
+.faq-hero-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Left handwritten doodle */
+.faq-doodle-left {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 12px;
+}
+.faq-doodle-text-left {
+  font-family: var(--font-handwriting, 'Caveat', cursive);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-orange, #F4512A);
+  line-height: 1.15;
+  transform: rotate(-8deg);
+  text-align: center;
+  white-space: nowrap;
+}
+.faq-doodle-arrow-left {
+  margin-top: 4px;
+  margin-left: 50px;
+  transform: rotate(5deg);
+}
+
+/* Center-left title and subtitle */
+.faq-hero-title-wrap {
+  flex: 1;
+  max-width: 440px;
+}
+
+.faq-hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-dark, #111820);
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+.faq-hero-title .highlight-orange {
+  color: var(--color-orange, #F4512A);
+}
+
+.faq-hero-subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: #4B5563;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+/* Right hero illustration (Table Tent with Answers + Vase + Doodle) */
+.faq-hero-right-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Right handwritten doodle */
+.faq-doodle-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+}
+.faq-doodle-text-right {
+  font-family: var(--font-handwriting, 'Caveat', cursive);
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--color-orange, #F4512A);
+  line-height: 1.18;
+  transform: rotate(8deg);
+  text-align: center;
+  white-space: nowrap;
+}
+.faq-doodle-arrow-right {
+  margin-top: 6px;
+  margin-right: 35px;
+}
+
+/* ============================================================
+   2. ACCORDION FAQ CARDS LIST (VERTICAL STACK)
+   ============================================================ */
+.faq-accordion-section {
+  padding: 10px 24px 64px;
+}
+
+.faq-accordion-container {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-acc-card {
+  background: #FFFFFF;
+  border: 1px solid #EAE5E0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.faq-acc-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 2px 10px rgba(17, 24, 32, 0.04);
+}
+
+.faq-acc-card.open {
+  border-color: #E2DBD4;
+}
+
+/* Question button row */
+.faq-acc-question-btn {
+  width: 100%;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+  font-size: 16.5px;
+  font-weight: 700;
+  color: var(--color-dark, #111820);
+  gap: 16px;
+}
+
+/* Icon: plus or minus */
+.faq-acc-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-dark, #111820);
+  line-height: 1;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+/* Answer container */
+.faq-acc-answer-wrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-acc-card.open .faq-acc-answer-wrap {
+  max-height: 260px;
+}
+
+/* Soft peach answer box matching the reference */
+.faq-acc-answer-box {
+  background: #FFF3EB;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 0 24px 20px;
+}
+
+.faq-acc-answer-text {
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #4B5563;
+  margin: 0;
+}
+
+/* ============================================================
+   3. BOTTOM BANNER / CTA SECTION
+   ============================================================ */
+.faq-banner-section {
+  padding: 0 24px 60px;
+}
+
+.faq-banner-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.faq-banner-card {
+  background: var(--color-orange, #F4512A);
+  border-radius: 18px;
+  padding: 44px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(244, 81, 42, 0.25);
+}
+
+/* Left Doodle in Banner */
+.faq-banner-doodle-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.faq-banner-doodle-text {
+  font-family: var(--font-handwriting, 'Caveat', cursive);
+  font-size: 26px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.15;
+  transform: rotate(-8deg);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.faq-banner-doodle-arrow {
+  margin-top: 4px;
+  margin-left: 35px;
+}
+
+/* Center Content */
+.faq-banner-content-center {
+  text-align: center;
+  z-index: 2;
+  flex: 1;
+  max-width: 540px;
+}
+
+.faq-banner-headline {
+  font-size: 28px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  line-height: 1.25;
+}
+
+.faq-banner-subheadline {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 6px;
+  margin-bottom: 22px;
+}
+
+.faq-banner-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  color: var(--color-dark, #111820);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 30px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  font-family: var(--font-main, 'Plus Jakarta Sans', sans-serif);
+}
+
+.faq-banner-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Right Cloche Illustration */
+.faq-banner-cloche-right {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+/* ============================================================
+   RESPONSIVE STYLES
+   ============================================================ */
+@media (max-width: 960px) {
+  .faq-doodle-left {
+    display: none;
+  }
+  .faq-doodle-right {
+    display: none;
+  }
+  .faq-hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+  .faq-hero-title-wrap {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-hero-title {
+    font-size: 36px;
+  }
+  .faq-hero-right-wrap {
+    display: none;
+  }
+  .faq-banner-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 24px;
+    gap: 24px;
+  }
+  .faq-banner-doodle-left,
+  .faq-banner-cloche-right {
+    display: none;
+  }
+}

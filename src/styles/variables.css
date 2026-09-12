@@ -1,0 +1,87 @@
+:root {
+  /* Core Brand Colors */
+  --brand-primary: #F59E0B;
+  --brand-primary-hover: #D97706;
+  --brand-primary-light: rgba(245, 158, 11, 0.15);
+  --brand-primary-glow: rgba(245, 158, 11, 0.35);
+
+  --brand-secondary: #10B981;
+  --brand-secondary-hover: #059669;
+  --brand-secondary-light: rgba(16, 185, 129, 0.15);
+
+  --brand-accent: #6366F1;
+  --brand-accent-glow: rgba(99, 102, 241, 0.35);
+
+  /* Dark Theme Palette (Default Dark Luxury Culinary) */
+  --bg-main: #0B0F17;
+  --bg-surface: #111827;
+  --bg-surface-elevated: #1F2937;
+  --bg-surface-glass: rgba(17, 24, 39, 0.75);
+  --bg-surface-subtle: #162032;
+
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --text-inverse: #0B0F17;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-focus: var(--brand-primary);
+
+  /* Status & Tags */
+  --badge-special-bg: rgba(245, 158, 11, 0.18);
+  --badge-special-text: #FBBF24;
+  --badge-veg-bg: rgba(16, 185, 129, 0.18);
+  --badge-veg-text: #34D399;
+  --badge-spicy-bg: rgba(239, 68, 68, 0.18);
+  --badge-spicy-text: #F87171;
+  --badge-gf-bg: rgba(168, 85, 247, 0.18);
+  --badge-gf-text: #C084FC;
+
+  /* Shadows & Glassmorphism */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 35px var(--brand-primary-glow);
+  --glass-blur: blur(14px);
+
+  /* Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Outfit', var(--font-sans);
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 260ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] {
+  --bg-main: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-surface-elevated: #F1F5F9;
+  --bg-surface-glass: rgba(255, 255, 255, 0.85);
+  --bg-surface-subtle: #E2E8F0;
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-medium: rgba(15, 23, 42, 0.16);
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.09);
+  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.12);
+  --shadow-glow: 0 0 25px rgba(245, 158, 11, 0.25);
+}

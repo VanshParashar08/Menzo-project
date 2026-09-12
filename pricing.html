@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — Menzo | Simple Pricing for Happier Restaurants</title>
+  <meta name="description" content="Start free and upgrade anytime. Transparent, simple pricing for restaurants, cafés, and cloud kitchens." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/landing.css" />
+  <link rel="stylesheet" href="/src/styles/pricing.css" />
+</head>
+<body class="pricing-page-body">
+
+  <!-- ============================================================
+       HEADER / NAVBAR
+       ============================================================ -->
+  <header class="navbar-wrapper">
+    <div class="navbar-container">
+      <a href="/" class="brand-logo" aria-label="Menzo Home">
+        <img src="/images/menzo-icon.png" alt="Menzo" class="brand-logo-img" />
+        <span class="brand-wordmark"><span class="brand-name">Menzo</span></span>
+      </a>
+      <nav class="nav-menu-desktop" aria-label="Main Navigation">
+        <a href="/features.html" class="nav-item">Features</a>
+        <a href="/pricing.html" class="nav-item nav-item--active" aria-current="page">Pricing</a>
+        <a href="/#restaurants" class="nav-item">For Restaurants</a>
+        <a href="/faq.html" class="nav-item">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="/generator.html" class="nav-login-btn">Log in</a>
+        <a href="/get-started.html" class="nav-cta-btn">Get Started</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-drawer" id="mobile-menu">
+      <nav class="mobile-nav-links">
+        <a href="/features.html" class="mobile-nav-item">Features</a>
+        <a href="/pricing.html" class="mobile-nav-item active">Pricing</a>
+        <a href="/#restaurants" class="mobile-nav-item">For Restaurants</a>
+        <a href="/faq.html" class="mobile-nav-item">FAQ</a>
+        <div class="mobile-nav-divider"></div>
+        <a href="/generator.html" class="mobile-nav-login">Log in</a>
+        <a href="/get-started.html" class="mobile-nav-cta">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         PRICING HERO SECTION
+         ============================================================ -->
+    <section class="pricing-hero-section">
+      <div class="pricing-hero-container">
+
+        <!-- Left Handwritten Doodle -->
+        <div class="doodle-stage-wrap" aria-hidden="true">
+          <span class="doodle-stage-text">Good menus<br />for every<br />stage</span>
+          <svg class="doodle-stage-arrow" width="60" height="60" viewBox="0 0 60 60" fill="none">
+            <path d="M12 6 C 14 26, 26 44, 50 44" stroke="#F4512A" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+            <polyline points="38 49 51 44 44 32" stroke="#F4512A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Center Header & Billing Toggle -->
+        <div class="pricing-header-center">
+          <h1 class="pricing-main-title">
+            Simple Pricing<br />
+            for <span class="highlight-orange">Happier Restaurants.</span>
+          </h1>
+          <p class="pricing-main-subtitle">
+            Start free and upgrade anytime. No hidden charges.
+          </p>
+
+          <div class="billing-toggle-wrapper">
+            <button type="button" class="billing-toggle-btn active" id="billing-monthly">Monthly</button>
+            <button type="button" class="billing-toggle-btn" id="billing-yearly">Yearly</button>
+            <span class="badge-save-20">Save 20%</span>
+          </div>
+        </div>
+
+        <!-- Right Table Tent Illustration -->
+        <div class="hero-tent-illustration" aria-hidden="true">
+          <svg class="tent-svg" width="170" height="200" viewBox="0 0 170 200" fill="none">
+            <!-- 3 Orange Spark Rays on Left of Tent -->
+            <line x1="22" y1="78" x2="42" y2="88" stroke="#F4512A" stroke-width="2.6" stroke-linecap="round"/>
+            <line x1="14" y1="108" x2="38" y2="108" stroke="#F4512A" stroke-width="2.6" stroke-linecap="round"/>
+            <line x1="22" y1="138" x2="44" y2="128" stroke="#F4512A" stroke-width="2.6" stroke-linecap="round"/>
+
+            <!-- Plant behind Tent (Top Right) -->
+            <path d="M128 75 C 132 45, 138 18, 135 4" stroke="#111820" stroke-width="3.2" stroke-linecap="round"/>
+            <ellipse cx="132" cy="22" rx="9" ry="16" transform="rotate(-25 132 22)" fill="#F4512A"/>
+            <ellipse cx="149" cy="34" rx="9" ry="16" transform="rotate(35 149 34)" fill="#F4512A"/>
+            <path d="M138 60 C 150 56, 158 72, 149 88 C 140 98, 136 82, 138 60 Z" fill="#111820"/>
+
+            <!-- Inside / Back Fold Face of Tent (Terracotta/Orange Shadow) -->
+            <polygon points="132,48 154,62 144,178 123,164" fill="#DF3E18" stroke="#111820" stroke-width="2.4" stroke-linejoin="round"/>
+
+            <!-- Front Face of Table Tent (White Paper) -->
+            <polygon points="50,48 132,48 123,176 41,176" fill="#FFFFFF" stroke="#111820" stroke-width="2.6" stroke-linejoin="round"/>
+
+            <!-- "Good Food Good Mood." text inside tent face -->
+            <text x="83" y="78" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="13" fill="#111820">Good</text>
+            <text x="83" y="96" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="13" fill="#111820">Food</text>
+            <text x="83" y="114" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="13" fill="#111820">Good</text>
+            <text x="83" y="132" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="13" fill="#111820">Mood.</text>
+
+            <!-- Handwritten Orange Smiley Face Icon -->
+            <circle cx="83" cy="154" r="8.5" fill="none" stroke="#F4512A" stroke-width="2"/>
+            <circle cx="80" cy="152" r="1.1" fill="#F4512A"/>
+            <circle cx="86" cy="152" r="1.1" fill="#F4512A"/>
+            <path d="M79 156 Q 83 160.5, 87 156" stroke="#F4512A" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRICING CARDS SECTION
+         ============================================================ -->
+    <section class="pricing-cards-section">
+      <div class="pricing-cards-grid">
+
+        <!-- Card 1: Free -->
+        <div class="pricing-card">
+          <div>
+            <div class="plan-header">
+              <h2 class="plan-title">Free</h2>
+              <p class="plan-description">Perfect to get started</p>
+            </div>
+
+            <div class="plan-price-row">
+              <span class="plan-currency">&#8377;</span>
+              <span class="plan-amount">0</span>
+              <span class="plan-period">forever</span>
+            </div>
+
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>1 Menu (Single outlet)</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Basic templates</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Add dishes, photos and prices</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>QR code</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Works on all smartphones</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="/get-started.html" class="plan-action-btn plan-action-btn--outline">Get Started Free</a>
+        </div>
+
+        <!-- Card 2: Pro (Most Popular) -->
+        <div class="pricing-card pricing-card--popular">
+          <span class="plan-popular-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19C19 19.6 18.6 20 18 20H6C5.4 20 5 19.6 5 19V18H19V19Z"/></svg>
+            Most Popular
+          </span>
+
+          <div>
+            <div class="plan-header">
+              <h2 class="plan-title">Pro</h2>
+              <p class="plan-description">Great for growing restaurants</p>
+            </div>
+
+            <div class="plan-price-row">
+              <span class="plan-currency">&#8377;</span>
+              <span class="plan-amount" id="pro-price-val">499</span>
+              <span class="plan-period">/ month</span>
+            </div>
+
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--orange">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Unlimited menus</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--orange">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Premium templates</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--orange">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Custom branding (logo, colors)</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--orange">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Edit anytime, instantly</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--orange">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Analytics (views, top dishes)</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--orange">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Priority support</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="/get-started.html" class="plan-action-btn plan-action-btn--primary">Get Started</a>
+        </div>
+
+        <!-- Card 3: Business -->
+        <div class="pricing-card">
+          <div>
+            <div class="plan-header">
+              <h2 class="plan-title">Business</h2>
+              <p class="plan-description">For multiple outlets &amp; teams</p>
+            </div>
+
+            <div class="plan-price-row">
+              <span class="plan-currency">&#8377;</span>
+              <span class="plan-amount" id="biz-price-val">1,499</span>
+              <span class="plan-period">/ month</span>
+            </div>
+
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Everything in Pro</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Multiple outlets</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Team access</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Advanced analytics</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Custom domain (yourrestaurant.com)</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="feat-check feat-check--peach">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </span>
+                <span>Priority support</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href="/get-started.html" class="plan-action-btn plan-action-btn--outline">Get Started</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FREQUENTLY ASKED QUESTIONS SECTION
+         ============================================================ -->
+    <section class="faq-section" id="faq">
+      <div class="faq-container">
+        <!-- Outer Left Spark Rays -->
+        <svg class="faq-rays-left" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <line x1="12" y1="12" x2="38" y2="34" stroke="#F4512A" stroke-width="3" stroke-linecap="round"/>
+          <line x1="6" y1="36" x2="32" y2="42" stroke="#F4512A" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Outer Right Spark Rays -->
+        <svg class="faq-rays-right" width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <line x1="36" y1="12" x2="10" y2="34" stroke="#F4512A" stroke-width="3" stroke-linecap="round"/>
+          <line x1="42" y1="36" x2="16" y2="42" stroke="#F4512A" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+
+        <div class="faq-header">
+          <span class="faq-badge-label">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="faq-main-title">Got Questions?</h2>
+        </div>
+
+        <div class="faq-grid">
+          <!-- Question 1 -->
+          <div class="faq-card">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Is there a free plan?</span>
+              <span class="faq-icon-plus">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p class="faq-answer-inner">
+                Yes! The Free plan is 100% free forever. It gives you 1 digital menu with your custom QR code, clean mobile-responsive templates, and unlimited scans with zero hidden costs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-card">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Do I need any technical knowledge?</span>
+              <span class="faq-icon-plus">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p class="faq-answer-inner">
+                Not at all. Menzo is built for restaurant owners, managers, and staff. You can build, edit, and publish your digital menu in under 2 minutes without writing a single line of code.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-card">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>Can I upgrade or downgrade later?</span>
+              <span class="faq-icon-plus">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p class="faq-answer-inner">
+                Yes, absolutely. You can upgrade, downgrade, or pause your subscription at any time with one click from your dashboard. Upgrades take effect immediately.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-card">
+            <button type="button" class="faq-question-btn" aria-expanded="false">
+              <span>What payment methods do you accept?</span>
+              <span class="faq-icon-plus">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p class="faq-answer-inner">
+                We accept all major credit cards, debit cards, UPI (Google Pay, PhonePe, Paytm), net banking, and international cards via secure end-to-end encrypted checkout.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BOTTOM BANNER / CTA SECTION
+         ============================================================ -->
+    <section class="pricing-banner-section">
+      <div class="pricing-banner-container">
+        <div class="pricing-banner-card">
+
+          <!-- Left Handwritten Doodle -->
+          <div class="banner-doodle-left" aria-hidden="true">
+            <span class="banner-doodle-text">Still unsure?<br />Start free!</span>
+            <svg class="banner-doodle-arrow" width="60" height="42" viewBox="0 0 60 42" fill="none">
+              <path d="M10 6 C 14 24, 30 36, 50 32" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+              <polyline points="40 38 52 32 44 20" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <!-- Center Content -->
+          <div class="banner-content-center">
+            <h2 class="banner-headline">Good food waits for no one.</h2>
+            <p class="banner-subheadline">Join restaurants already going digital with Menzo.</p>
+            <a href="/get-started.html" class="banner-cta-btn">
+              Get Started Free &rarr;
+            </a>
+          </div>
+
+          <!-- Right Cloche Hand Illustration -->
+          <div class="banner-cloche-right" aria-hidden="true">
+            <svg class="cloche-svg" width="165" height="135" viewBox="0 0 165 135" fill="none">
+              <!-- 3 Radiating White Rays -->
+              <line x1="32" y1="84" x2="10" y2="78" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+              <line x1="36" y1="96" x2="14" y2="104" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+              <line x1="46" y1="105" x2="32" y2="120" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+              
+              <!-- Cloche Dome & Platter Base -->
+              <path d="M28 100 Q 82 122 136 102" stroke="#111820" stroke-width="4" stroke-linecap="round" fill="none"/>
+              <path d="M34 98 C 38 54, 110 60, 126 98 Z" fill="#F4512A" stroke="#111820" stroke-width="3.5" stroke-linejoin="round"/>
+              
+              <!-- Dome Reflection Line -->
+              <path d="M46 86 C 52 68, 72 62, 88 62" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              
+              <!-- Handle Knob -->
+              <circle cx="80" cy="52" r="7" fill="#F4512A" stroke="#111820" stroke-width="3.5"/>
+              
+              <!-- Arm / Sleeve with Black Outline -->
+              <path d="M124 96 C 132 92, 144 98, 150 106 C 156 114, 162 126, 165 135 L 122 135 C 120 122, 118 108, 124 96 Z" fill="#FFFFFF" stroke="#111820" stroke-width="3.5" stroke-linejoin="round"/>
+              <!-- Hand Finger Detail -->
+              <path d="M122 100 C 128 102, 138 108, 140 116" stroke="#111820" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer-wrapper">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="/" class="brand-logo footer-brand-logo" aria-label="Menzo Home">
+            <img src="/images/menzo-icon.png" alt="Menzo" class="brand-logo-img brand-logo-img--sm" />
+            <span class="brand-wordmark"><span class="brand-name">Menzo</span></span>
+          </a>
+          <p class="footer-tagline">Simple Menus. Happier Guests.</p>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links-list">
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/generator.html">Templates</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="/#features">About</a></li>
+            <li><a href="mailto:support@menzo.com">Contact</a></li>
+            <li><a href="/#features">Privacy</a></li>
+            <li><a href="/#features">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="footer-social-row">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">&copy; 2025 Menzo. All rights reserved.</p>
+        <p class="footer-love">Made for the love of good food. <span class="heart-icon">&#10084;&#65039;</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/pricing.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menzo Studio — Interactive Restaurant Menu Builder</title>
+  <meta name="description" content="Build, customize, and generate your live contactless restaurant QR menu with real-time mobile preview." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/src/styles/generator.css" />
+</head>
+<body>
+
+  <div class="studio-app">
+    
+    <!-- Studio Header -->
+    <header class="studio-header">
+      <div class="studio-header-left">
+        <a href="/" class="back-home-link" title="Return to Landing Page">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          <span>Home</span>
+        </a>
+        <div class="restaurant-title-editable">
+          <span id="header-restaurant-name">Delhi Chole Bhature</span>
+          <span class="save-status-pill">
+            <span class="status-dot"></span>
+            <span>Saved</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="studio-header-actions">
+        <button class="btn btn-secondary btn-sm" id="btn-open-print-modal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <span>Print Table Stand</span>
+        </button>
+        <button class="btn btn-primary btn-sm" id="btn-header-download-qr">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download QR</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile View Switcher (for small screens) -->
+    <div class="mobile-view-tabs" id="mobile-view-tabs">
+      <button class="mobile-view-btn active" data-view="editor">Menu Editor</button>
+      <button class="mobile-view-btn" data-view="preview">Live Preview</button>
+    </div>
+
+    <!-- Main Workspace (Editor + Live Device Simulator) -->
+    <main class="studio-workspace" id="studio-workspace">
+      
+      <!-- Left Panel: Control Studio -->
+      <section class="editor-panel">
+        
+        <!-- Tab Navigation -->
+        <nav class="editor-tabs-bar">
+          <button class="editor-tab-btn active" data-tab="tab-menu">
+            Menu & Items
+          </button>
+          <button class="editor-tab-btn" data-tab="tab-branding">
+            Branding & Info
+          </button>
+          <button class="editor-tab-btn" data-tab="tab-qr">
+            QR & Stand
+          </button>
+        </nav>
+
+        <!-- Tab 1: Menu & Items -->
+        <div class="editor-tab-content" id="tab-menu">
+          <div class="cat-manager-bar">
+            <div>
+              <h3 style="font-size: 1.1rem;">Menu Categories</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Manage sections and items displayed to diners</p>
+            </div>
+            <button class="btn btn-primary btn-sm" id="btn-add-dish-trigger">
+              + Add Dish
+            </button>
+          </div>
+
+          <!-- Category Selector Chips in Editor -->
+          <div style="display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.75rem; margin-bottom: 1rem;" id="editor-cat-chips">
+            <!-- Populated via JS -->
+          </div>
+
+          <!-- Dishes list in active category -->
+          <div id="editor-dishes-list">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Tab 2: Branding & Details -->
+        <div class="editor-tab-content" id="tab-branding" style="display: none;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Restaurant Profile</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.25rem;">These details appear on your digital menu header</p>
+
+          <div class="form-group">
+            <label class="form-label">Restaurant Name</label>
+            <input type="text" class="form-input" id="input-brand-name" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Cuisine / Tagline</label>
+            <input type="text" class="form-input" id="input-brand-tagline" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Currency Symbol</label>
+              <select class="form-select" id="select-currency">
+                <option value="₹">₹ (INR)</option>
+                <option value="$">$ (USD / CAD / AUD)</option>
+                <option value="€">€ (EUR)</option>
+                <option value="£">£ (GBP)</option>
+                <option value="AED ">AED (Emirates)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Default Table Number</label>
+              <input type="text" class="form-input" id="input-table-number" placeholder="e.g. Table 04" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Guest WiFi Details (Shown on menu)</label>
+            <input type="text" class="form-input" id="input-wifi" placeholder="Network / Password" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Brand Accent Color</label>
+            <div class="color-picker-row">
+              <div class="color-swatch active" style="background: #FF4D2D;" data-color="#FF4D2D"></div>
+              <div class="color-swatch" style="background: #F59E0B;" data-color="#F59E0B"></div>
+              <div class="color-swatch" style="background: #10B981;" data-color="#10B981"></div>
+              <div class="color-swatch" style="background: #6366F1;" data-color="#6366F1"></div>
+              <div class="color-swatch" style="background: #0F172A;" data-color="#0F172A"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: QR Code & Stand Studio -->
+        <div class="editor-tab-content" id="tab-qr" style="display: none;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 0.25rem;">QR Code Studio</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.25rem;">Customize colors, frame text, and center logo</p>
+
+          <!-- Live QR Preview Box -->
+          <div class="qr-live-preview-center">
+            <div class="qr-frame-wrapper" id="studio-qr-frame">
+              <div class="qr-frame-title" id="studio-frame-title-display">SCAN FOR DIGITAL MENU</div>
+              <canvas id="studio-qr-canvas" width="200" height="200" class="qr-canvas-element"></canvas>
+              <div class="qr-frame-desc" id="studio-frame-sub-display">Point phone camera to view menu</div>
+            </div>
+          </div>
+
+          <div class="qr-config-panel" style="margin-top: 1.5rem;">
+            <div class="form-group">
+              <label class="form-label">Frame Header Text</label>
+              <input type="text" class="form-input" id="input-qr-frame-text" value="SCAN FOR DIGITAL MENU" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">QR Code Dark Color</label>
+                <input type="color" class="form-input" id="input-qr-fg" value="#0F172A" style="height: 42px; padding: 2px;" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">QR Background Color</label>
+                <input type="color" class="form-input" id="input-qr-bg" value="#FFFFFF" style="height: 42px; padding: 2px;" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Center Logo Icon</label>
+              <select class="form-select" id="select-qr-logo">
+                <option value="utensils">Fork & Knife (Dining)</option>
+                <option value="wine">Beverage Glass</option>
+                <option value="flame">Flame (Tandoor / Grill)</option>
+                <option value="coffee">Tea / Coffee Cup</option>
+              </select>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem;">
+              <button class="btn btn-primary" id="btn-save-qr-png" style="flex: 1;">
+                Download PNG
+              </button>
+              <button class="btn btn-secondary" id="btn-print-tent-direct" style="flex: 1;">
+                Print Stand
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Right Panel: Real-Time Live Device Simulator -->
+      <section class="preview-panel">
+        
+        <!-- Device View Toolbar -->
+        <div class="preview-toolbar">
+          <button class="device-btn active" id="btn-view-mobile">
+            Mobile View
+          </button>
+          <button class="device-btn" id="btn-view-desktop">
+            Desktop View
+          </button>
+        </div>
+
+        <!-- Simulated Device Frame -->
+        <div class="device-container mode-mobile" id="device-container">
+          <div class="phone-mockup" id="simulator-phone-container">
+            <!-- Rendered by renderCustomerMenu component -->
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Modal: Add / Edit Dish -->
+  <div class="modal-overlay" id="dish-modal">
+    <div class="modal-content-box">
+      <div class="modal-header">
+        <h3 id="dish-modal-title">Add New Menu Dish</h3>
+        <button class="icon-action-btn" id="btn-close-dish-modal" style="font-size: 1.25rem;">&times;</button>
+      </div>
+
+      <form id="dish-edit-form">
+        <input type="hidden" id="edit-dish-id" />
+        
+        <div class="form-group">
+          <label class="form-label">Category</label>
+          <select class="form-select" id="dish-form-category" required>
+            <!-- Filled via JS -->
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Dish Name</label>
+            <input type="text" class="form-input" id="dish-form-name" placeholder="e.g. Special Amritsari Chole Bhature" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Price</label>
+            <input type="number" step="1" class="form-input" id="dish-form-price" placeholder="160" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Description & Ingredients</label>
+          <textarea class="form-textarea" rows="3" id="dish-form-desc" placeholder="2 fluffy bhature, slow-cooked pindi chana, pickled carrots, onions..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Badge Tag</label>
+            <input type="text" class="form-input" id="dish-form-badge" placeholder="e.g. Bestseller, Chef Special" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Calories (Optional)</label>
+            <input type="text" class="form-input" id="dish-form-calories" placeholder="e.g. 680 kcal" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Dish Photo Preset</label>
+          <select class="form-select" id="dish-form-image">
+            <option value="">No Photo (Text-only)</option>
+            <option value="/images/pizza.jpg">Margherita Pizza Photo</option>
+            <option value="/images/paneer_tikka.jpg">Paneer Tikka Photo</option>
+            <option value="/images/choco_lava_cake.jpg">Choco Lava Cake Photo</option>
+            <option value="/images/pasta.jpg">Pasta Alfredo Photo</option>
+            <option value="/images/chole_bhature.jpg">Chole Bhature Photo</option>
+            <option value="/images/kulhad_lassi.jpg">Special Kulhad Lassi Photo</option>
+            <option value="/images/burger.jpg">Classic Burger Photo</option>
+            <option value="/images/cocktail.jpg">Craft Cocktail Photo</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Dietary Preferences</label>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <label style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; cursor: pointer;">
+              <input type="checkbox" id="diet-veg" value="vegetarian" checked /> Vegetarian
+            </label>
+            <label style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; cursor: pointer;">
+              <input type="checkbox" id="diet-vegan" value="vegan" /> Vegan
+            </label>
+            <label style="display: flex; align-items: center; gap: 0.35rem; font-size: 0.85rem; cursor: pointer;">
+              <input type="checkbox" id="diet-gf" value="gluten-free" /> Gluten-Free
+            </label>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 1.5rem;">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-dish">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Dish Item</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Print Table Stand Preview -->
+  <div class="modal-overlay" id="print-modal">
+    <div class="modal-content-box" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3>Print Table Stand Card</h3>
+        <button class="icon-action-btn" id="btn-close-print-modal" style="font-size: 1.25rem;">&times;</button>
+      </div>
+
+      <div class="printable-stand-sheet" id="printable-stand-container">
+        <div class="print-cut-fold-guides">
+          <div class="stand-brand-logo" id="print-restaurant-name">DELHI CHOLE BHATURE</div>
+          <div class="stand-table-number" id="print-table-badge">TABLE 04</div>
+          
+          <div style="width: 180px; height: 180px; margin: 0 auto;">
+            <canvas id="print-qr-canvas" width="180" height="180"></canvas>
+          </div>
+
+          <div style="font-family: var(--font-heading); font-size: 0.85rem; font-weight: 800; margin-top: 0.75rem; color: #0F172A;">
+            SCAN FOR DIGITAL MENU
+          </div>
+          <div class="stand-instructions">
+            Point your smartphone camera to view items, dietary filters and order directly.
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; margin-top: 1.5rem;">
+        <button class="btn btn-secondary" id="btn-close-print-btn" style="flex: 1;">Close</button>
+        <button class="btn btn-primary" id="btn-trigger-browser-print" style="flex: 1;">Print Now</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/generator.js"></script>
+</body>
+</html>

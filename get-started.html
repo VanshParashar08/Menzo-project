@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Started — Menzo | Create Your Restaurant Account</title>
+  <meta name="description" content="Create your restaurant account on Menzo. Create, manage and share your digital menu in minutes — no app needed." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/landing.css" />
+  <link rel="stylesheet" href="/src/styles/get-started.css" />
+</head>
+<body class="get-started-body">
+
+  <div class="get-started-layout">
+    
+    <!-- ============================================================
+         LEFT PANEL: VISUAL SHOWCASE & RESTAURANT AMBIENCE
+         ============================================================ -->
+    <aside class="get-started-showcase-panel" aria-label="Menzo Restaurant Showcase">
+      <div class="showcase-inner-wrap">
+        <!-- High-res background image covering the full panel -->
+        <img src="/images/get_started_showcase.png" alt="Menzo restaurant table display with QR menu" class="showcase-bg-image" />
+        
+        <!-- Accessible text overlay for assistive tech & SEO -->
+        <div class="sr-only">
+          <h2>Menzo: Menus for a better dining experience</h2>
+          <p>Create, manage and share your menu in minutes — no app needed.</p>
+          <ul>
+            <li>Set up fast — Get your menu live in minutes</li>
+            <li>Go digital — Share via QR code</li>
+            <li>Grow your business — Attract more happy customers</li>
+          </ul>
+          <p>Simple. Modern. For every restaurant. Trusted by The Food Club, SPICE BOX, Cafe 47, and Mumbai Bites.</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ============================================================
+         RIGHT PANEL: ACCOUNT CREATION FORM
+         ============================================================ -->
+    <main class="get-started-form-panel">
+      <!-- Top Bar with Login Link -->
+      <div class="form-top-bar">
+        <span class="already-account-text">Already have an account?</span>
+        <a href="/generator.html" class="top-login-btn">Log in</a>
+      </div>
+
+      <!-- Main Form Wrapper -->
+      <div class="form-content-container">
+        <!-- Brand Logo Header -->
+        <a href="/" class="form-brand-lockup" aria-label="Menzo Home">
+          <img src="/images/menzo-icon.png" alt="Menzo" class="form-brand-icon" />
+          <span class="form-brand-name">Menzo</span>
+        </a>
+
+        <!-- Title & Subtitle -->
+        <div class="form-header-text">
+          <h1 class="form-main-title">Get Started</h1>
+          <p class="form-main-subtitle">Create your restaurant account</p>
+        </div>
+
+        <!-- Registration Form -->
+        <form id="signup-form" class="restaurant-signup-form" novalidate>
+          <!-- Field 1: Restaurant Name -->
+          <div class="form-field-group">
+            <label for="restaurantName" class="form-label">Restaurant Name</label>
+            <input 
+              type="text" 
+              id="restaurantName" 
+              name="restaurantName" 
+              class="form-input-text" 
+              placeholder="e.g. The Food Club" 
+              required 
+              autocomplete="organization"
+            />
+            <span class="field-error-msg" id="error-restaurantName"></span>
+          </div>
+
+          <!-- Field 2: Owner Name -->
+          <div class="form-field-group">
+            <label for="ownerName" class="form-label">Owner Name</label>
+            <input 
+              type="text" 
+              id="ownerName" 
+              name="ownerName" 
+              class="form-input-text" 
+              placeholder="e.g. Rohan Mehta" 
+              required 
+              autocomplete="name"
+            />
+            <span class="field-error-msg" id="error-ownerName"></span>
+          </div>
+
+          <!-- Field 3: Phone Number -->
+          <div class="form-field-group">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <div class="phone-input-composite">
+              <div class="country-code-picker" tabindex="0" aria-label="Country prefix India">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" class="flag-icon" aria-hidden="true">
+                  <rect width="20" height="4.67" fill="#FF9933"/>
+                  <rect y="4.67" width="20" height="4.67" fill="#FFFFFF"/>
+                  <rect y="9.33" width="20" height="4.67" fill="#138808"/>
+                  <circle cx="10" cy="7" r="1.5" stroke="#000080" stroke-width="0.5" fill="none"/>
+                </svg>
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" class="chevron-icon" aria-hidden="true">
+                  <path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="country-prefix">+91</span>
+              <input 
+                type="tel" 
+                id="phoneNumber" 
+                name="phoneNumber" 
+                class="form-input-phone" 
+                placeholder="98765 43210" 
+                required 
+                autocomplete="tel-national"
+              />
+            </div>
+            <span class="field-error-msg" id="error-phoneNumber"></span>
+          </div>
+
+          <!-- Field 4: Email Address -->
+          <div class="form-field-group">
+            <label for="emailAddress" class="form-label">Email Address</label>
+            <input 
+              type="email" 
+              id="emailAddress" 
+              name="emailAddress" 
+              class="form-input-text" 
+              placeholder="you@restaurant.com" 
+              required 
+              autocomplete="email"
+            />
+            <span class="field-error-msg" id="error-emailAddress"></span>
+          </div>
+
+          <!-- Field 5: Password with Toggle -->
+          <div class="form-field-group">
+            <label for="accountPassword" class="form-label">Password</label>
+            <div class="password-input-composite">
+              <input 
+                type="password" 
+                id="accountPassword" 
+                name="accountPassword" 
+                class="form-input-password" 
+                placeholder="Create a password" 
+                required 
+                autocomplete="new-password"
+              />
+              <button type="button" class="password-toggle-btn" id="password-toggle" aria-label="Toggle password visibility">
+                <!-- Eye Open -->
+                <svg class="eye-icon eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <!-- Eye Closed -->
+                <svg class="eye-icon eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                </svg>
+              </button>
+            </div>
+            <span class="field-error-msg" id="error-accountPassword"></span>
+          </div>
+
+          <!-- Submit CTA Button -->
+          <button type="submit" class="submit-create-account-btn" id="submit-btn">
+            <span>Create Account</span>
+            <span class="submit-arrow">&rarr;</span>
+          </button>
+        </form>
+
+        <!-- Divider with 'or' -->
+        <div class="auth-divider-line">
+          <span class="auth-divider-text">or</span>
+        </div>
+
+        <!-- Social Authentication Buttons Row -->
+        <div class="social-auth-row">
+          <button type="button" class="social-auth-btn social-google-btn" id="google-auth-btn">
+            <svg width="18" height="18" viewBox="0 0 18 18" class="social-btn-icon">
+              <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.616z"/>
+              <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/>
+              <path fill="#FBBC05" d="M3.964 10.707c-.18-.54-.282-1.117-.282-1.707s.102-1.167.282-1.707V4.961H.957C.347 6.173 0 7.548 0 9s.347 2.827.957 4.039l3.007-2.332z"/>
+              <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 7.293C4.672 5.166 6.656 3.58 9 3.58z"/>
+            </svg>
+            <span>Continue with Google</span>
+          </button>
+
+          <button type="button" class="social-auth-btn social-apple-btn" id="apple-auth-btn">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" class="social-btn-icon">
+              <path d="M14.54 13.97c-.36.79-.79 1.5-1.28 2.14-.66.86-1.2 1.47-1.63 1.83-.65.57-1.34.86-2.07.86-.53 0-1.14-.14-1.83-.43-.69-.29-1.35-.43-1.99-.43-.67 0-1.36.14-2.06.43-.7.29-1.3.44-1.8.44-.7 0-1.4-.3-2.09-.89-.47-.41-1.04-1.04-1.72-1.9-.84-1.06-1.5-2.29-1.98-3.69C-.52 10.9.06 9.49.06 8.09c0-1.42.4-2.59 1.2-3.52.8-.93 1.78-1.4 2.94-1.4.67 0 1.38.16 2.13.49.75.33 1.26.5 1.53.5.21 0 .74-.18 1.58-.53.84-.36 1.57-.5 2.18-.44 1.7.14 3.01.81 3.93 2-.99.59-1.5 1.41-1.52 2.46-.03 1.05.41 1.94 1.31 2.66.42.34.89.58 1.41.73-.24.78-.58 1.59-1.02 2.43zM11.64.08c0 .87-.33 1.73-.99 2.58-.66.85-1.47 1.36-2.43 1.53-.02-.12-.03-.23-.03-.33 0-.85.34-1.73 1.02-2.64C9.89.31 10.74 0 11.64.08z"/>
+            </svg>
+            <span>Continue with Apple</span>
+          </button>
+        </div>
+
+        <!-- Terms of Service & Privacy Policy -->
+        <p class="terms-privacy-notice">
+          By continuing, you agree to our <a href="/#terms" class="legal-link">Terms of Service</a> and <a href="/#privacy" class="legal-link">Privacy Policy</a>.
+        </p>
+      </div>
+
+      <!-- Bottom Right Organic Blob & Doodle -->
+      <div class="bottom-decorative-area">
+        <div class="bottom-blob-shape blob-shape-right"></div>
+        <div class="bottom-blob-shape blob-shape-left"></div>
+        
+        <div class="bottom-doodle-lockup">
+          <svg class="doodle-arrow-svg" width="34" height="28" viewBox="0 0 34 28" fill="none">
+            <path d="M28 22 C22 26, 12 24, 6 14 C4 10, 4 6, 6 2" stroke="#D64620" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path d="M1 8 L6 2 L11 7" stroke="#D64620" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="bottom-doodle-text">
+            Let's put<br />
+            your menu<br />
+            on the map.
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <script type="module" src="/src/get-started.js"></script>
+</body>
+</html>

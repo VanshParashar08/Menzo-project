@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Features — Menzo | Built for Modern Restaurants</title>
+  <meta name="description" content="Explore Menzo features: instant QR codes, beautiful customizable designs, real-time menu updates, and analytics built for modern restaurants." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/landing.css" />
+  <link rel="stylesheet" href="/src/styles/features.css" />
+</head>
+<body class="features-page-body">
+
+  <!-- ============================================================
+       HEADER / NAVBAR
+       ============================================================ -->
+  <header class="navbar-wrapper">
+    <div class="navbar-container">
+      <a href="/" class="brand-logo" aria-label="Menzo Home">
+        <img src="/images/menzo-icon.png" alt="Menzo" class="brand-logo-img" />
+        <span class="brand-wordmark"><span class="brand-name">Menzo</span></span>
+      </a>
+      <nav class="nav-menu-desktop" aria-label="Main Navigation">
+        <a href="/features.html" class="nav-item nav-item--active-features" aria-current="page">Features</a>
+        <a href="/pricing.html" class="nav-item">Pricing</a>
+        <a href="/#restaurants" class="nav-item">For Restaurants</a>
+        <a href="/faq.html" class="nav-item">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="/generator.html" class="nav-login-btn">Log in</a>
+        <a href="/get-started.html" class="nav-cta-btn">Get Started</a>
+        <button class="mobile-toggle-btn" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-drawer" id="mobile-menu">
+      <nav class="mobile-nav-links">
+        <a href="/features.html" class="mobile-nav-item active">Features</a>
+        <a href="/pricing.html" class="mobile-nav-item">Pricing</a>
+        <a href="/#restaurants" class="mobile-nav-item">For Restaurants</a>
+        <a href="/faq.html" class="mobile-nav-item">FAQ</a>
+        <div class="mobile-nav-divider"></div>
+        <a href="/generator.html" class="mobile-nav-login">Log in</a>
+        <a href="/get-started.html" class="mobile-nav-cta">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="features-main-content">
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="features-hero-section">
+      <div class="features-hero-left">
+        <span class="features-badge">FEATURES</span>
+        <h1 class="features-hero-title">
+          Built for<br />
+          modern <span class="highlight-orange">restaurants</span>
+        </h1>
+        <p class="features-hero-subtitle">
+          Everything you need. Nothing you don't.
+        </p>
+        <a href="/get-started.html" class="features-cta-btn">
+          Get Started Free <span class="cta-arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Handwritten Script Doodle -->
+      <div class="features-hero-doodle">
+        <span class="doodle-text">From menu<br />to QR in<br />minutes.</span>
+        <svg class="doodle-arrow" width="48" height="42" viewBox="0 0 48 42" fill="none">
+          <path d="M6 6 C14 26, 28 34, 42 30" stroke="#F4512A" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+          <polyline points="32 24 42 30 36 39" stroke="#F4512A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- Hero Right 3D Showcase Illustration -->
+      <div class="features-hero-right">
+        <div class="features-hero-backdrop-blob"></div>
+
+        <div class="features-stands-wrap">
+          <!-- Stand 1: Menu Sheet -->
+          <div class="features-menu-stand">
+            <div class="menu-stand-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L12 22"></path>
+                <path d="M12 7C14.5 4.5 18 4.5 20 7C22 9.5 22 13 19.5 15.5L12 22"></path>
+                <path d="M12 7C9.5 4.5 6 4.5 4 7C2 9.5 2 13 4.5 15.5L12 22"></path>
+              </svg>
+              <span>The Food Club</span>
+            </div>
+            <div class="menu-stand-items">
+              <div class="menu-stand-row">
+                <img src="/images/paneer_tikka.jpg" alt="Paneer Tikka" class="menu-stand-thumb" />
+                <div class="menu-stand-info">
+                  <span class="menu-stand-name">Paneer Tikka</span>
+                  <span class="menu-stand-price">&#8377;280</span>
+                </div>
+              </div>
+              <div class="menu-stand-row">
+                <img src="/images/masala_dosa.jpg" alt="Masala Dosa" class="menu-stand-thumb" />
+                <div class="menu-stand-info">
+                  <span class="menu-stand-name">Masala Dosa</span>
+                  <span class="menu-stand-price">&#8377;110</span>
+                </div>
+              </div>
+              <div class="menu-stand-row">
+                <img src="/images/cold_coffee.jpg" alt="Cold Coffee" class="menu-stand-thumb" />
+                <div class="menu-stand-info">
+                  <span class="menu-stand-name">Cold Coffee</span>
+                  <span class="menu-stand-price">&#8377;120</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stand 2: Table Tent with QR Code -->
+          <div class="features-qr-stand">
+            <!-- Sparks rays -->
+            <svg class="qr-stand-sparks" viewBox="0 0 32 32" fill="none">
+              <line x1="6" y1="26" x2="2" y2="16" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="16" y1="26" x2="16" y2="10" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="26" y1="26" x2="30" y2="16" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+
+            <div class="stand-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L12 22"></path>
+                <path d="M12 7C14.5 4.5 18 4.5 20 7C22 9.5 22 13 19.5 15.5L12 22"></path>
+                <path d="M12 7C9.5 4.5 6 4.5 4 7C2 9.5 2 13 4.5 15.5L12 22"></path>
+              </svg>
+              <span>The Food Club</span>
+            </div>
+
+            <div class="qr-code-box">
+              <svg viewBox="0 0 100 100" fill="none">
+                <!-- 4 Coral Corner Brackets -->
+                <path d="M4 18 V4 H18" stroke="#F4512A" stroke-width="3" stroke-linecap="round"/>
+                <path d="M82 4 H96 V18" stroke="#F4512A" stroke-width="3" stroke-linecap="round"/>
+                <path d="M4 82 V96 H18" stroke="#F4512A" stroke-width="3" stroke-linecap="round"/>
+                <path d="M82 96 H96 V82" stroke="#F4512A" stroke-width="3" stroke-linecap="round"/>
+
+                <!-- Top Left Finder -->
+                <rect x="12" y="12" width="24" height="24" rx="3" stroke="#111820" stroke-width="3.5" fill="none"/>
+                <rect x="19" y="19" width="10" height="10" rx="1" fill="#111820"/>
+
+                <!-- Top Right Finder -->
+                <rect x="64" y="12" width="24" height="24" rx="3" stroke="#111820" stroke-width="3.5" fill="none"/>
+                <rect x="71" y="19" width="10" height="10" rx="1" fill="#111820"/>
+
+                <!-- Bottom Left Finder -->
+                <rect x="12" y="64" width="24" height="24" rx="3" stroke="#111820" stroke-width="3.5" fill="none"/>
+                <rect x="19" y="71" width="10" height="10" rx="1" fill="#111820"/>
+
+                <!-- Matrix Bits -->
+                <rect x="42" y="14" width="6" height="6" fill="#111820"/>
+                <rect x="52" y="14" width="6" height="6" fill="#111820"/>
+                <rect x="42" y="24" width="6" height="6" fill="#111820"/>
+                <rect x="52" y="24" width="6" height="6" fill="#111820"/>
+
+                <rect x="14" y="44" width="6" height="6" fill="#111820"/>
+                <rect x="24" y="44" width="6" height="6" fill="#111820"/>
+                <rect x="34" y="44" width="6" height="6" fill="#111820"/>
+
+                <!-- Center Orange Dot -->
+                <circle cx="50" cy="50" r="4.5" fill="#F4512A"/>
+
+                <rect x="62" y="44" width="6" height="6" fill="#111820"/>
+                <rect x="72" y="44" width="6" height="6" fill="#111820"/>
+                <rect x="82" y="44" width="6" height="6" fill="#111820"/>
+
+                <rect x="44" y="64" width="6" height="6" fill="#111820"/>
+                <rect x="54" y="64" width="6" height="6" fill="#111820"/>
+                <rect x="64" y="64" width="6" height="6" fill="#111820"/>
+
+                <rect x="44" y="78" width="6" height="6" fill="#111820"/>
+                <rect x="54" y="78" width="6" height="6" fill="#111820"/>
+                <rect x="74" y="78" width="6" height="6" fill="#111820"/>
+                <rect x="84" y="78" width="6" height="6" fill="#111820"/>
+              </svg>
+            </div>
+
+            <span class="qr-scan-text">Scan. Order. Enjoy.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3X3 FEATURES GRID
+         ============================================================ -->
+    <section class="features-grid-section">
+      <div class="features-grid">
+
+        <!-- Card 1: Create Menu -->
+        <div class="feature-card card-create-menu card-side-by-side">
+          <div class="feature-card-content">
+            <div class="feature-icon-squircle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Create Menu</h3>
+            <p class="feature-card-desc">Add dishes with photos in minutes.</p>
+          </div>
+          <div class="feature-card-visual">
+            <div class="phone-mockup-light">
+              <div class="phone-light-header"></div>
+              <img src="/images/paneer_tikka.jpg" alt="Dish Preview" class="phone-light-dish-img" />
+              <div class="phone-light-line"></div>
+              <div class="phone-light-line short"></div>
+              <div class="floating-plus-btn">+</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Beautiful Designs -->
+        <div class="feature-card card-beautiful-designs card-side-by-side">
+          <div class="feature-card-content">
+            <div class="feature-icon-squircle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Beautiful Designs</h3>
+            <p class="feature-card-desc">Choose from clean templates.</p>
+          </div>
+          <div class="feature-card-visual">
+            <div class="phone-mockup-dark">
+              <div class="phone-dark-banner">
+                <div class="phone-dark-logo-wrap">
+                  <img src="/images/menzo-icon.png" alt="Logo icon" class="phone-dark-logo-icon" />
+                  <span class="phone-dark-logo-text">YOUR LOGO</span>
+                </div>
+              </div>
+              <div class="phone-dark-body">
+                <div class="phone-dark-headline">Good<br />Food<br />Good Mood.</div>
+                <img src="/images/chole_bhature.jpg" alt="Dark template food" class="phone-dark-dish-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Instant QR Code -->
+        <div class="feature-card card-instant-qr card-side-by-side">
+          <div class="feature-card-content">
+            <div class="feature-icon-squircle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Instant QR Code</h3>
+            <p class="feature-card-desc">Get a QR code for your menu.</p>
+          </div>
+          <div class="feature-card-visual">
+            <div class="card-qr-stand-visual">
+              <div class="card-qr-shadow"></div>
+              <div class="card-qr-tent">
+                <!-- Sparks -->
+                <svg class="card-qr-tent-sparks" viewBox="0 0 24 24" fill="none">
+                  <line x1="4" y1="20" x2="2" y2="12" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round"/>
+                  <line x1="12" y1="20" x2="12" y2="8" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round"/>
+                  <line x1="20" y1="20" x2="22" y2="12" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+                <svg class="qr-matrix" viewBox="0 0 80 80" fill="none">
+                  <!-- Coral Corner Brackets -->
+                  <path d="M4 14 V4 H14" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M66 4 H76 V14" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M4 66 V76 H14" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M66 76 H76 V66" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round"/>
+
+                  <!-- Finders -->
+                  <rect x="10" y="10" width="18" height="18" rx="2" stroke="#111820" stroke-width="2.5"/>
+                  <rect x="15" y="15" width="8" height="8" fill="#111820"/>
+                  <rect x="52" y="10" width="18" height="18" rx="2" stroke="#111820" stroke-width="2.5"/>
+                  <rect x="57" y="15" width="8" height="8" fill="#111820"/>
+                  <rect x="10" y="52" width="18" height="18" rx="2" stroke="#111820" stroke-width="2.5"/>
+                  <rect x="15" y="57" width="8" height="8" fill="#111820"/>
+
+                  <!-- Center red dot -->
+                  <circle cx="40" cy="40" r="3.5" fill="#F4512A"/>
+                  <rect x="34" y="14" width="5" height="5" fill="#111820"/>
+                  <rect x="42" y="14" width="5" height="5" fill="#111820"/>
+                  <rect x="34" y="60" width="5" height="5" fill="#111820"/>
+                  <rect x="54" y="54" width="5" height="5" fill="#111820"/>
+                  <rect x="62" y="62" width="5" height="5" fill="#111820"/>
+                </svg>
+                <div class="card-qr-tent-label">Scan Me</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Works Everywhere -->
+        <div class="feature-card card-works-everywhere card-side-by-side">
+          <div class="feature-card-content">
+            <div class="feature-icon-squircle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Works Everywhere</h3>
+            <p class="feature-card-desc">Opens on any phone. No app needed.</p>
+          </div>
+          <div class="feature-card-visual">
+            <div class="devices-mockup-row">
+              <!-- Tablet in back -->
+              <div class="device-tablet">
+                <div class="device-tablet-content">
+                  <div class="device-tablet-col">
+                    <div class="device-tablet-line"></div>
+                    <div class="device-tablet-line"></div>
+                    <div class="device-tablet-line"></div>
+                  </div>
+                  <div class="device-tablet-col">
+                    <img src="/images/paneer_tikka.jpg" alt="Tablet food" class="device-tablet-img" />
+                    <div class="device-tablet-line"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Mid phone -->
+              <div class="device-phone-mid">
+                <img src="/images/burger.jpg" alt="Mid phone food" class="device-phone-mid-img" />
+              </div>
+              <!-- Front phone -->
+              <div class="device-phone-front">
+                <div class="device-phone-front-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Easy Updates -->
+        <div class="feature-card card-easy-updates card-side-by-side">
+          <div class="feature-card-content">
+            <div class="feature-icon-squircle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Easy Updates</h3>
+            <p class="feature-card-desc">Edit dishes, prices or photos anytime.</p>
+          </div>
+          <div class="feature-card-visual">
+            <div class="updates-card-box">
+              <div class="updates-row">
+                <img src="/images/margherita_pizza.jpg" alt="Pizza" class="updates-dish-thumb" />
+                <span class="updates-dish-name">Pizza</span>
+                <span class="updates-dish-price">&#8377;250</span>
+                <span class="updates-edit-icon">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </span>
+              </div>
+              <div class="updates-row">
+                <img src="/images/pasta_alfredo.jpg" alt="Pasta" class="updates-dish-thumb" />
+                <span class="updates-dish-name">Pasta</span>
+                <span class="updates-dish-price">&#8377;220</span>
+                <span class="updates-edit-icon">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </span>
+              </div>
+              <div class="updates-row">
+                <img src="/images/burger.jpg" alt="Burger" class="updates-dish-thumb" />
+                <span class="updates-dish-name">Burger</span>
+                <span class="updates-dish-price">&#8377;180</span>
+                <span class="updates-edit-icon">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: See What People Love -->
+        <div class="feature-card card-analytics card-side-by-side">
+          <div class="feature-card-content">
+            <div class="feature-icon-squircle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">See What People Love</h3>
+            <p class="feature-card-desc">Track top dishes and views.</p>
+          </div>
+          <div class="feature-card-visual">
+            <div class="analytics-chart-box">
+              <div class="analytics-badge-wrap">
+                <div class="analytics-popular-badge">Most Popular</div>
+              </div>
+              <div class="analytics-bars-row">
+                <div class="analytics-bar bar-1"></div>
+                <div class="analytics-bar bar-2"></div>
+                <div class="analytics-bar bar-3"></div>
+              </div>
+              <div class="analytics-thumbs-row">
+                <img src="/images/burger.jpg" alt="Burger" class="analytics-dish-thumb" />
+                <img src="/images/paneer_tikka.jpg" alt="Paneer Tikka" class="analytics-dish-thumb" />
+                <img src="/images/margherita_pizza.jpg" alt="Pizza" class="analytics-dish-thumb" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Share Anywhere -->
+        <div class="feature-card card-share-anywhere card-stacked">
+          <div class="feature-card-content">
+            <div class="feature-icon-squircle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Share Anywhere</h3>
+            <p class="feature-card-desc">Use on Instagram, WhatsApp, Google Maps and more.</p>
+          </div>
+          <div class="feature-card-visual">
+            <div class="share-apps-row">
+              <!-- Instagram -->
+              <div class="share-app-btn">
+                <div class="app-icon-instagram">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </div>
+              </div>
+              <!-- WhatsApp -->
+              <div class="share-app-btn">
+                <div class="app-icon-whatsapp">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                  </svg>
+                </div>
+              </div>
+              <!-- Google Maps -->
+              <div class="share-app-btn">
+                <div class="app-icon-maps">
+                  <svg width="18" height="24" viewBox="0 0 24 32" fill="none">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 9 12 20 12 20s12-11 12-20c0-6.63-5.37-12-12-12z" fill="#EA4335"/>
+                    <circle cx="12" cy="12" r="5" fill="#FFFFFF"/>
+                  </svg>
+                </div>
+              </div>
+              <!-- Link -->
+              <div class="share-app-btn">
+                <div class="app-icon-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: Make It Yours -->
+        <div class="feature-card card-make-it-yours card-stacked">
+          <div class="feature-card-content">
+            <div class="feature-icon-squircle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">Make It Yours</h3>
+            <p class="feature-card-desc">Add your logo and brand colors.</p>
+          </div>
+          <div class="feature-card-visual">
+            <div class="branding-box-visual">
+              <div class="swatches-row">
+                <span class="color-swatch swatch-1"></span>
+                <span class="color-swatch swatch-2"></span>
+                <span class="color-swatch swatch-3"></span>
+                <span class="color-swatch swatch-4"></span>
+              </div>
+              <div class="add-logo-pill">+ Add Logo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 9: We've Got You -->
+        <div class="feature-card card-support card-stacked">
+          <div class="feature-card-content">
+            <div class="feature-icon-squircle">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card-title">We've Got You</h3>
+            <p class="feature-card-desc">Friendly support whenever you need it.</p>
+          </div>
+          <div class="feature-card-visual">
+            <div class="support-chat-visual">
+              <div class="chat-bubble-message">
+                <div class="chat-avatar">M</div>
+                <div class="chat-text">Need help?<br />We're here! &#128522;</div>
+              </div>
+              <div class="chat-bubble-typing">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BOTTOM CTA BANNER
+         ============================================================ -->
+    <section class="features-cta-banner-section">
+      <div class="features-cta-banner">
+        <div class="features-cta-banner-left">
+          <h2 class="features-cta-banner-title">
+            Ready to create<br />
+            your menu?
+          </h2>
+          <p class="features-cta-banner-subtitle">
+            Join thousands of restaurants already using Menzo.
+          </p>
+        </div>
+
+        <div class="features-cta-banner-center">
+          <a href="/get-started.html" class="features-cta-banner-btn">
+            Get Started Free <span class="cta-arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="features-cta-banner-right">
+          <div class="features-cta-banner-doodle">
+            Good<br />
+            food goes<br />
+            further.
+          </div>
+          <svg class="features-cloche-svg" width="150" height="130" viewBox="0 0 150 130" fill="none">
+            <!-- Spark lines -->
+            <line x1="30" y1="78" x2="10" y2="74" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+            <line x1="34" y1="88" x2="14" y2="96" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+            <line x1="44" y1="95" x2="32" y2="108" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/>
+            <!-- Base rim shadow -->
+            <path d="M28 95 Q80 118 132 100" stroke="#111820" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <!-- Orange dome -->
+            <path d="M32 93 C36 52, 106 58, 122 94 Z" fill="#F4512A" stroke="#111820" stroke-width="3.5" stroke-linejoin="round"/>
+            <circle cx="77" cy="50" r="7" fill="#F4512A" stroke="#111820" stroke-width="3.5"/>
+            <!-- White highlight arc -->
+            <path d="M42 85 C45 64, 75 62, 86 64" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            <!-- Server Hand -->
+            <path d="M120 92 C128 88, 140 94, 144 100 C148 106, 150 118, 150 125 L112 125 C114 112, 112 100, 120 92 Z" fill="#FFFFFF" stroke="#111820" stroke-width="3.5" stroke-linejoin="round"/>
+            <path d="M118 96 C124 98, 132 103, 134 110" stroke="#111820" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer-wrapper">
+    <div class="footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="/" class="brand-logo footer-brand-logo" aria-label="Menzo Home">
+            <img src="/images/menzo-icon.png" alt="Menzo" class="brand-logo-img brand-logo-img--sm" />
+            <span class="brand-wordmark"><span class="brand-name">Menzo</span></span>
+          </a>
+          <p class="footer-tagline">Simple Menus. Happier Guests.</p>
+        </div>
+
+        <div class="footer-links-col">
+          <ul class="footer-links-list footer-horizontal-links">
+            <li><a href="/features.html">Features</a></li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/#restaurants">For Restaurants</a></li>
+            <li><a href="/faq.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social-col">
+          <div class="footer-social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="X (formerly Twitter)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">&copy; 2025 Menzo. All rights reserved.</p>
+        <p class="footer-love">Made for the love of good food. <span class="heart-icon">&#10084;&#65039;</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/features.js"></script>
+</body>
+</html>
