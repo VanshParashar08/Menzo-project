@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log In — Menzo | Restaurant Dashboard Access</title>
+  <meta name="description" content="Log in to your Menzo restaurant account. Manage your digital QR menu, tables, and orders in real time." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/landing.css" />
+  <link rel="stylesheet" href="/src/styles/get-started.css" />
+</head>
+<body class="get-started-body">
+
+  <!-- ============================================================
+       TOP NAVBAR: LOGO & AUTH MODE TOGGLE
+       ============================================================ -->
+  <header class="auth-page-navbar">
+    <div class="auth-navbar-container">
+      <a href="/" class="auth-brand-logo" aria-label="Menzo Home">
+        <img src="/images/menzo-icon-4k.png" alt="Menzo" class="auth-brand-icon" />
+        <span class="auth-brand-name">Menzo</span>
+      </a>
+
+      <div class="auth-top-actions">
+        <span class="already-account-text" id="top-auth-prompt">Don't have an account?</span>
+        <button type="button" class="top-login-btn" id="toggle-auth-mode-btn">Get Started</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN CONTENT: CENTERED AUTHENTICATION CARD
+       ============================================================ -->
+  <main class="auth-page-main">
+    <!-- Ambient Organic Blobs for Landing Page Warm Atmosphere -->
+    <div class="auth-bg-blob-1" aria-hidden="true"></div>
+    <div class="auth-bg-blob-2" aria-hidden="true"></div>
+
+    <!-- Floating Background Decorative Culinary Icons & Doodles -->
+    <div class="auth-bg-decorations" aria-hidden="true">
+      <!-- 1. Top Left: Fork & Knife Pill Badge -->
+      <div class="bg-icon-badge bg-badge-top-left float-anim-1" title="Culinary">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2v20M2 2v10a4 4 0 0 0 4 4h4M6 2v6M10 2v6"/>
+        </svg>
+      </div>
+
+      <!-- 2. Top Right: Cloche Serving Cover -->
+      <div class="bg-icon-badge bg-badge-top-right float-anim-2" title="Fine Dining">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 4V2"/>
+          <path d="M4 18h16a1 1 0 0 0 1-1A9 9 0 0 0 3 17a1 1 0 0 0 1 1z"/>
+          <path d="M2 22h20"/>
+        </svg>
+      </div>
+
+      <!-- 3. Left Middle: Handwritten Doodle Note with Arrow -->
+      <div class="bg-doodle-note bg-doodle-left float-anim-3">
+        <span class="doodle-note-text">Simple. Modern.<br>For every restaurant.</span>
+        <svg class="doodle-note-arrow" width="56" height="38" viewBox="0 0 56 38" fill="none">
+          <path d="M6 8 C20 26, 38 28, 50 18" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <polyline points="42 12 50 18 44 26" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- 4. Bottom Left: Coffee / Beverage Cup Badge -->
+      <div class="bg-icon-badge bg-badge-bottom-left float-anim-2" title="Café & Bistro">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+          <line x1="6" y1="1" x2="6" y2="4"/>
+          <line x1="10" y1="1" x2="10" y2="4"/>
+          <line x1="14" y1="1" x2="14" y2="4"/>
+        </svg>
+      </div>
+
+      <!-- 5. Right Middle: Handwritten Note with Arrow & Sparkle -->
+      <div class="bg-doodle-note bg-doodle-right float-anim-1">
+        <span class="doodle-sparkle">✦</span>
+        <span class="doodle-note-text">Live menu in<br>5 minutes!</span>
+        <svg class="doodle-note-arrow-right" width="52" height="34" viewBox="0 0 52 34" fill="none">
+          <path d="M48 6 C34 22, 18 24, 6 16" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <polyline points="14 12 6 16 12 24" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- 6. Bottom Right: QR Code Badge -->
+      <div class="bg-icon-badge bg-badge-bottom-right float-anim-3" title="Instant QR">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="3" height="3"/>
+          <rect x="18" y="18" width="3" height="3"/>
+        </svg>
+      </div>
+
+      <!-- 7. Floating Wine Glass Badge -->
+      <div class="bg-icon-badge bg-badge-mid-right float-anim-2" title="Drinks & Bars">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 22h8"/>
+          <path d="M12 15v7"/>
+          <path d="M5 3h14l-2 9a5 5 0 0 1-10 0L5 3z"/>
+        </svg>
+      </div>
+
+      <!-- 8. Floating Flame / Grill Badge -->
+      <div class="bg-icon-badge bg-badge-mid-left float-anim-1" title="Fresh & Hot">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+        </svg>
+      </div>
+
+      <!-- 9. Floating Sparkles & Stars -->
+      <div class="bg-sparkle sparkle-1">✦</div>
+      <div class="bg-sparkle sparkle-2">★</div>
+      <div class="bg-sparkle sparkle-3">✦</div>
+      <div class="bg-sparkle sparkle-4">✦</div>
+      <div class="bg-sparkle sparkle-5">★</div>
+    </div>
+
+    <div class="form-content-container">
+      <!-- Auth Tabs Switcher (Create Account / Log In) -->
+      <div class="auth-mode-tabs" role="tablist">
+        <button type="button" class="auth-tab" id="tab-signup" role="tab" aria-selected="false">
+          Create Account
+        </button>
+        <button type="button" class="auth-tab active" id="tab-login" role="tab" aria-selected="true">
+          Log In
+        </button>
+      </div>
+
+      <!-- Title & Subtitle -->
+      <div class="form-header-text">
+        <h1 class="form-main-title" id="form-title">Welcome Back</h1>
+        <p class="form-main-subtitle" id="form-subtitle">Log in to your restaurant dashboard</p>
+      </div>
+
+      <!-- System Notification / Error Alert Container -->
+      <div id="auth-alert" class="auth-alert" style="display: none;" role="alert">
+        <div class="auth-alert-icon" id="auth-alert-icon"></div>
+        <div class="auth-alert-message" id="auth-alert-message"></div>
+      </div>
+
+      <!-- One-Click Google Authentication -->
+      <button type="button" class="btn-social-auth google-auth-btn" id="google-auth-btn">
+        <svg class="google-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z"/>
+          <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.15C3.25 21.37 7.31 24 12 24Z"/>
+          <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.26C.46 8.16 0 9.94 0 12s.46 3.84 1.26 5.42l4.02-3.15Z"/>
+          <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.63 1.26 6.58l4.02 3.15c.95-2.83 3.6-4.98 6.72-4.98Z"/>
+        </svg>
+        <span id="google-auth-text">Continue with Google</span>
+      </button>
+      <button type="button" id="google-redirect-btn" style="background:none;border:none;color:#6B7280;font-size:12px;cursor:pointer;padding:4px 0 0;margin-top:2px;display:block;width:100%;text-align:center;font-family:inherit;">
+        Trouble with popups? <span style="text-decoration:underline;color:#F4512A;font-weight:600;">Use full-page redirect</span>
+      </button>
+
+      <!-- Divider -->
+      <div class="auth-divider">
+        <span class="auth-divider-text">or continue with email</span>
+      </div>
+
+      <!-- Registration & Login Form -->
+      <form id="signup-form" class="restaurant-signup-form" novalidate>
+        <!-- Sign-Up Specific Fields Container (hidden in login mode) -->
+        <div id="signup-extra-fields" style="display: none;">
+          <!-- Field 1: Restaurant Name -->
+          <div class="form-field-group">
+            <label for="restaurantName" class="form-label">Restaurant Name</label>
+            <input 
+              type="text" 
+              id="restaurantName" 
+              name="restaurantName" 
+              class="form-input-text" 
+              placeholder="e.g. The Food Club" 
+              autocomplete="organization"
+            />
+            <span class="field-error-msg" id="error-restaurantName"></span>
+          </div>
+
+          <!-- Field 2: Owner Name -->
+          <div class="form-field-group">
+            <label for="ownerName" class="form-label">Owner Name</label>
+            <input 
+              type="text" 
+              id="ownerName" 
+              name="ownerName" 
+              class="form-input-text" 
+              placeholder="e.g. Rohan Mehta" 
+              autocomplete="name"
+            />
+            <span class="field-error-msg" id="error-ownerName"></span>
+          </div>
+
+          <!-- Field 3: Phone Number -->
+          <div class="form-field-group">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <div class="phone-input-composite">
+              <div class="country-code-picker" tabindex="0" aria-label="Country prefix India">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" class="flag-icon" aria-hidden="true">
+                  <rect width="20" height="4.67" fill="#FF9933"/>
+                  <rect y="4.67" width="20" height="4.67" fill="#FFFFFF"/>
+                  <rect y="9.33" width="20" height="4.67" fill="#138808"/>
+                  <circle cx="10" cy="7" r="1.5" stroke="#000080" stroke-width="0.5" fill="none"/>
+                </svg>
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" class="chevron-icon" aria-hidden="true">
+                  <path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="country-prefix">+91</span>
+              <input 
+                type="tel" 
+                id="phoneNumber" 
+                name="phoneNumber" 
+                class="form-input-phone" 
+                placeholder="98765 43210" 
+                autocomplete="tel-national"
+              />
+            </div>
+            <span class="field-error-msg" id="error-phoneNumber"></span>
+          </div>
+        </div>
+
+        <!-- Common Field: Email Address -->
+        <div class="form-field-group">
+          <label for="emailAddress" class="form-label">Email Address</label>
+          <input 
+            type="email" 
+            id="emailAddress" 
+            name="emailAddress" 
+            class="form-input-text" 
+            placeholder="you@restaurant.com" 
+            required 
+            autocomplete="email"
+          />
+          <span class="field-error-msg" id="error-emailAddress"></span>
+        </div>
+
+        <!-- Common Field: Password with Toggle -->
+        <div class="form-field-group">
+          <div class="password-label-wrapper">
+            <label for="accountPassword" class="form-label" id="password-label">Password</label>
+            <button type="button" class="forgot-password-link" id="forgot-password-btn" style="display: inline-block;">
+              Forgot?
+            </button>
+          </div>
+          <div class="password-input-composite">
+            <input 
+              type="password" 
+              id="accountPassword" 
+              name="accountPassword" 
+              class="form-input-password" 
+              placeholder="Enter password" 
+              required 
+              autocomplete="current-password"
+            />
+            <button type="button" class="password-toggle-btn" id="password-toggle" aria-label="Toggle password visibility">
+              <!-- Eye Open -->
+              <svg class="eye-icon eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <!-- Eye Closed -->
+              <svg class="eye-icon eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
+          </div>
+          <span class="field-error-msg" id="error-accountPassword"></span>
+        </div>
+
+        <!-- Submit CTA Button -->
+        <button type="submit" class="submit-create-account-btn" id="submit-btn">
+          <span id="submit-btn-text">Log In</span>
+          <span class="submit-arrow">&rarr;</span>
+        </button>
+      </form>
+
+      <!-- Terms of Service & Privacy Policy -->
+      <p class="terms-privacy-notice" id="terms-notice" style="display: none;">
+        By continuing, you agree to our <a href="/#terms" class="legal-link">Terms of Service</a> and <a href="/#privacy" class="legal-link">Privacy Policy</a>.
+      </p>
+
+      <!-- Bottom Trust Badges Bar -->
+      <div class="bottom-trust-badges-bar">
+        <div class="trust-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="trust-badge-icon">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          <span class="trust-badge-text">Secure & Safe</span>
+        </div>
+
+        <div class="trust-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="trust-badge-icon">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <span class="trust-badge-text">10K+ Restaurants</span>
+        </div>
+
+        <div class="trust-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="trust-badge-icon">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span class="trust-badge-text">Made for You</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/src/get-started.js"></script>
+</body>
+</html>

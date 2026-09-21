@@ -1,0 +1,16 @@
+{
+  "auth": {
+    "providers": {
+      "emailPassword": true,
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "Menzo",
+        "supportEmail": "vanshparashar0812@gmail.com"
+      }
+    },
+    "authorizedDomains": [
+      "localhost",
+      "menzo-338a7.firebaseapp.com",
+      "menzo-338a7.web.app"
+    ]
+  }
+}

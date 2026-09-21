@@ -2,6 +2,8 @@
    MENZO FEATURES PAGE CLIENT SCRIPTS
    ============================================================ */
 
+import './components/navbarAuth.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile Navigation Toggle
   const mobileToggle = document.getElementById('mobile-toggle');

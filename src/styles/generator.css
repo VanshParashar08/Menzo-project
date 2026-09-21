@@ -154,6 +154,31 @@
   background: var(--bg-surface);
 }
 
+.order-counter-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: #F4512A;
+  color: #FFFFFF;
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.editor-tab-btn:not(.active) .order-counter-pill {
+  background: #E5E7EB;
+  color: #374151;
+}
+
+[data-theme="dark"] .editor-tab-btn:not(.active) .order-counter-pill {
+  background: #374151;
+  color: #E5E7EB;
+}
+
 .editor-tab-content {
   flex: 1;
   overflow-y: auto;

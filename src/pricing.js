@@ -5,26 +5,25 @@
    - Mobile navigation drawer
    ============================================================ */
 
+import './components/navbarAuth.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Billing Toggle Logic
   const btnMonthly = document.getElementById('billing-monthly');
   const btnYearly = document.getElementById('billing-yearly');
   const proPriceEl = document.getElementById('pro-price-val');
-  const bizPriceEl = document.getElementById('biz-price-val');
 
-  if (btnMonthly && btnYearly && proPriceEl && bizPriceEl) {
+  if (btnMonthly && btnYearly && proPriceEl) {
     btnMonthly.addEventListener('click', () => {
       btnMonthly.classList.add('active');
       btnYearly.classList.remove('active');
       proPriceEl.textContent = '499';
-      bizPriceEl.textContent = '1,499';
     });
 
     btnYearly.addEventListener('click', () => {
       btnYearly.classList.add('active');
       btnMonthly.classList.remove('active');
       proPriceEl.textContent = '399';
-      bizPriceEl.textContent = '1,199';
     });
   }
 

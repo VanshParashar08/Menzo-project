@@ -98,9 +98,9 @@
             <div class="doodle-text">
               Upgrade<br />anytime
             </div>
-            <svg class="doodle-curve-arrow" width="30" height="28" viewBox="0 0 30 28" fill="none">
-              <path d="M6 4 C14 2, 24 6, 22 18 C21 21, 18 24, 12 22" stroke="#D64620" stroke-width="2" stroke-linecap="round" fill="none"/>
-              <path d="M16 26 L12 22 L17 18" stroke="#D64620" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg class="doodle-curve-arrow" width="34" height="30" viewBox="0 0 34 30" fill="none">
+              <path d="M8 4 C20 4, 30 12, 22 24 C19 28, 14 28, 8 24" stroke="#E04622" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M14 28 L7 24 L12 18" stroke="#E04622" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
         </div>
@@ -108,12 +108,17 @@
         <!-- 3 Plan Cards Grid -->
         <div class="plans-cards-grid" role="radiogroup" aria-label="Subscription Plans">
           
-          <!-- Card 1: Free -->
-          <div class="onboarding-plan-card" id="card-free" role="radio" aria-checked="false" tabindex="0">
+          <!-- Card 1: Free (Recommended) -->
+          <div class="onboarding-plan-card is-popular is-selected" id="card-free" role="radio" aria-checked="true" tabindex="0">
+            <!-- Centered Ribbon Badge -->
+            <div class="popular-ribbon-badge">Recommended</div>
+
             <div class="plan-card-header">
               <div class="plan-icon-squircle squircle-pink">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22v-8m0 0a5 5 0 0 0 5-5c0-4-5-7-5-7s-5 3-5 7a5 5 0 0 0 5 5z"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21v-7"/>
+                  <path d="M12 14C8.5 14 6 11.5 6 8c3.5 0 6 2 6 6z"/>
+                  <path d="M12 11c3.5 0 6-2 6-5.5-3.5 0-6 1.5-6 5.5z"/>
                 </svg>
               </div>
               <h3 class="plan-name">Free</h3>
@@ -127,35 +132,32 @@
 
             <ul class="plan-checklist">
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Create your menu</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>QR code (basic)</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Unlimited dishes</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Real-time updates</span>
               </li>
             </ul>
 
-            <button type="button" class="plan-action-btn btn-soft-slate" data-plan="free">Continue Free</button>
+            <button type="button" class="plan-action-btn btn-coral" data-plan="free">Continue Free</button>
           </div>
 
-          <!-- Card 2: Pro (Most Popular / Default Highlighted) -->
-          <div class="onboarding-plan-card is-popular is-selected" id="card-pro" role="radio" aria-checked="true" tabindex="0">
-            <!-- Centered Ribbon Badge -->
-            <div class="popular-ribbon-badge">Most Popular</div>
-
+          <!-- Card 2: Pro (Coming Soon) -->
+          <div class="onboarding-plan-card" id="card-pro" role="radio" aria-checked="false" tabindex="0">
             <div class="plan-card-header">
               <div class="plan-icon-squircle squircle-amber">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14v2H5v-2z"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7z"/>
                 </svg>
               </div>
               <h3 class="plan-name">Pro</h3>
@@ -163,43 +165,47 @@
             </div>
 
             <div class="plan-price-block">
-              <span class="price-figure">₹499</span>
-              <span class="price-cadence">/ month</span>
+              <span class="price-figure" style="font-size: 24px;">Coming Soon</span>
             </div>
 
             <ul class="plan-checklist">
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Everything in Free</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Live order management (Table &amp; Cart)</span>
+              </li>
+              <li>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Custom QR code</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Beautiful menu themes</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Remove Menzo branding</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Menu analytics</span>
               </li>
             </ul>
 
-            <button type="button" class="plan-action-btn btn-coral" data-plan="pro">Choose Pro</button>
+            <button type="button" class="plan-action-btn btn-soft-slate" data-plan="pro" disabled style="opacity: 0.5; cursor: not-allowed;">Coming Soon</button>
           </div>
 
           <!-- Card 3: Business -->
           <div class="onboarding-plan-card" id="card-business" role="radio" aria-checked="false" tabindex="0">
             <div class="plan-card-header">
               <div class="plan-icon-squircle squircle-blue">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                  <polyline points="9 22 9 12 15 12 15 22"/>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l1.5-5h15L21 9v2a2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1-2 2 2 2 0 0 1-2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2V9z"/>
+                  <path d="M5 13v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>
+                  <path d="M9 22v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5"/>
                 </svg>
               </div>
               <h3 class="plan-name">Business</h3>
@@ -207,34 +213,37 @@
             </div>
 
             <div class="plan-price-block">
-              <span class="price-figure">₹1,499</span>
-              <span class="price-cadence">/ month</span>
+              <span class="price-figure" style="font-size: 24px;">Coming Soon</span>
             </div>
 
             <ul class="plan-checklist">
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Everything in Pro</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Kitchen Display (KDS) &amp; routing</span>
+              </li>
+              <li>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Multiple branches</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Staff access</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Priority support</span>
               </li>
               <li>
-                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <svg class="feat-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>Advanced analytics</span>
               </li>
             </ul>
 
-            <button type="button" class="plan-action-btn btn-soft-slate" data-plan="business">Choose Business</button>
+            <button type="button" class="plan-action-btn btn-soft-slate" disabled style="opacity: 0.65; cursor: not-allowed;" data-plan="business">Coming Soon</button>
           </div>
 
         </div>
@@ -243,9 +252,9 @@
         <div class="not-sure-banner-card">
           <div class="not-sure-left">
             <div class="gift-icon-box">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="20 12 20 22 4 22 4 12"></polyline>
-                <rect x="2" y="7" width="20" height="5"></rect>
+                <rect x="2" y="7" width="20" height="5" rx="1"></rect>
                 <line x1="12" y1="22" x2="12" y2="7"></line>
                 <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
                 <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
@@ -257,11 +266,11 @@
             </div>
           </div>
 
-          <!-- Caveat Doodle Arrow -->
+          <!-- Caveat Doodle Arrow: Arrow on left, text on right -->
           <div class="no-cc-doodle" aria-hidden="true">
-            <svg class="no-cc-arrow" width="28" height="24" viewBox="0 0 28 24" fill="none">
-              <path d="M26 4 C22 14, 14 18, 4 20" stroke="#5A6578" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-              <path d="M4 14 L4 20 L10 22" stroke="#5A6578" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg class="no-cc-arrow" width="36" height="30" viewBox="0 0 36 30" fill="none">
+              <path d="M30 4 C24 14, 16 20, 6 22" stroke="#5A6578" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <path d="M6 14 L5 23 L14 24" stroke="#5A6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             <span>No credit card<br />needed now!</span>
           </div>

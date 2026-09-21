@@ -1,4 +1,5 @@
 // Menzo Landing Page Client Scripts
+import './components/navbarAuth.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Mobile Navigation Toggle

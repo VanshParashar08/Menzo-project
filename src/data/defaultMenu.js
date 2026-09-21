@@ -1,13 +1,97 @@
+// ============================================================
+// MENZO DEFAULT RESTAURANT & MENU DATA
+// Preloaded with Top 50+ Most Ordered Dishes in Indian Restaurants & Cafes
+// ============================================================
+
+import { ALL_TRAINED_DISHES } from './trainedDishes.js';
+
+export function getDefaultIndianCategories() {
+  const categoryDefs = [
+    {
+      id: 'cat-starters',
+      name: 'Starters & Tandoori',
+      desc: 'Smoky tandoori kebabs, crispy appetizers and chef special platters',
+      filter: d => d.category === 'Starters & Tandoori'
+    },
+    {
+      id: 'cat-mains',
+      name: 'Main Course (Gravies)',
+      desc: 'Rich buttery curries, slow-cooked dal, and royal paneer gravies',
+      filter: d => d.category === 'Main Course'
+    },
+    {
+      id: 'cat-biryani',
+      name: 'Biryani & Rice',
+      desc: 'Authentic dum cooked biryanis and fragrant aged basmati rice',
+      filter: d => d.category === 'Biryani & Rice'
+    },
+    {
+      id: 'cat-breads',
+      name: 'Indian Breads & Sides',
+      desc: 'Freshly baked tandoori naans, flaky parathas and raitas',
+      filter: d => d.category === 'Indian Breads'
+    },
+    {
+      id: 'cat-south',
+      name: 'South Indian Classics',
+      desc: 'Crispy ghee roast dosas, fluffy idlis and steaming sambhar',
+      filter: d => d.category === 'South Indian'
+    },
+    {
+      id: 'cat-street',
+      name: 'Street Food & Chaats',
+      desc: 'Mumbai pav bhaji, Delhi chole bhature and savory chaats',
+      filter: d => d.category === 'Street Food & Chaat'
+    },
+    {
+      id: 'cat-chinese',
+      name: 'Indo-Chinese Specials',
+      desc: 'Wok-tossed noodles, spicy chilli gravies and crispy manchurian',
+      filter: d => d.category === 'Indo-Chinese'
+    },
+    {
+      id: 'cat-cafe',
+      name: 'Café & Beverages',
+      desc: 'Artisan cold brews, masala chai, thick shakes and lassis',
+      filter: d => d.category === 'Café & Beverages'
+    },
+    {
+      id: 'cat-desserts',
+      name: 'Desserts & Sweets',
+      desc: 'Traditional Indian sweet delicacies in desi ghee and saffron',
+      filter: d => d.category === 'Desserts'
+    }
+  ];
+
+  return categoryDefs.map(cat => ({
+    id: cat.id,
+    name: cat.name,
+    desc: cat.desc,
+    items: ALL_TRAINED_DISHES.filter(cat.filter).map(dish => ({
+      id: dish.id,
+      name: dish.name,
+      desc: dish.desc,
+      price: dish.price,
+      img: dish.img,
+      isVeg: dish.isVeg,
+      bestseller: dish.tag === 'BESTSELLER',
+      badge: dish.tag,
+      rating: 4.8 + Math.round(Math.random() * 2) / 10,
+      votes: Math.floor(120 + Math.random() * 280)
+    }))
+  }));
+}
+
 export const defaultRestaurant = {
-  name: "The Burger House",
-  tagline: "Good food, good mood",
-  cuisine: "Gourmet Burgers, Pizza & Craft Shakes",
-  address: "42 Park Street, Gourmet Quarter",
-  phone: "+1 (555) 345-6789",
-  wifi: "BurgerHouse_Guest / burgers2026",
+  name: "The Food Club",
+  tagline: "Authentic Indian Flavours & Café",
+  cuisine: "North Indian, South Indian, Tandoori & Café",
+  address: "42 Heritage Boulevard, Connaught Place",
+  phone: "+91 98765 43210",
+  wifi: "MenzoGuest / welcome2026",
   currency: "₹",
   tableNumber: "Table 04",
-  themeColor: "#FF4D2D",
+  themeColor: "#F4512A",
   fontStyle: "Plus Jakarta Sans",
   qrSettings: {
     fgColor: "#111827",
@@ -17,136 +101,36 @@ export const defaultRestaurant = {
     logo: "utensils",
     showLogo: true,
   },
-  categories: [
-    {
-      id: "cat-starters",
-      name: "Starters",
-      icon: "",
-      items: [
-        {
-          id: "item-paneer-tikka",
-          name: "Sizzling Paneer Tikka",
-          price: 220,
-          description: "Charred cottage cheese cubes marinated in spiced tandoori masala with bell peppers, onions, and mint chutney.",
-          image: "/images/paneer_tikka.jpg",
-          badges: ["Bestseller", "Chef Special"],
-          dietary: ["vegetarian", "gluten-free"],
-          calories: "380 kcal",
-          allergens: ["Dairy"],
-          spicyLevel: 2
-        }
-      ]
-    },
-    {
-      id: "cat-pizza",
-      name: "Pizza",
-      icon: "",
-      items: [
-        {
-          id: "item-margherita-pizza",
-          name: "Neapolitan Buffalo Margherita",
-          price: 299,
-          description: "72-hour slow fermented sourdough, San Marzano plum tomatoes, fresh buffalo mozzarella, fragrant basil, cold-pressed olive oil.",
-          image: "/images/pizza.jpg",
-          badges: ["Popular"],
-          dietary: ["vegetarian"],
-          calories: "720 kcal",
-          allergens: ["Dairy", "Gluten"],
-          spicyLevel: 0
-        }
-      ]
-    },
-    {
-      id: "cat-pasta",
-      name: "Pasta",
-      icon: "",
-      items: [
-        {
-          id: "item-pasta-alfredo",
-          name: "Creamy Pasta Alfredo",
-          price: 299,
-          description: "Fettuccine pasta in rich velvety parmesan garlic cream sauce, tossed with cracked black pepper and fresh Italian parsley.",
-          image: "/images/pasta.jpg",
-          badges: ["Bestseller"],
-          dietary: ["vegetarian"],
-          calories: "640 kcal",
-          allergens: ["Dairy", "Gluten"],
-          spicyLevel: 0
-        }
-      ]
-    },
-    {
-      id: "cat-desserts",
-      name: "Desserts",
-      icon: "",
-      items: [
-        {
-          id: "item-choco-lava-cake",
-          name: "Decadent Choco Lava Cake",
-          price: 250,
-          description: "Warm molten chocolate lava cake with rich dark chocolate flowing from the center, served with vanilla bean ice cream.",
-          image: "/images/choco_lava_cake.jpg",
-          badges: ["Signature"],
-          dietary: ["vegetarian"],
-          calories: "490 kcal",
-          allergens: ["Dairy", "Gluten", "Eggs"],
-          spicyLevel: 0
-        }
-      ]
-    },
-    {
-      id: "cat-burgers",
-      name: "Burgers",
-      icon: "",
-      items: [
-        {
-          id: "item-classic-chicken-burger",
-          name: "Classic Chicken Burger",
-          price: 249,
-          description: "Juicy crispy chicken patty, fresh lettuce, aged cheddar cheese and our special house sauce on toasted brioche.",
-          image: "/images/burger.jpg",
-          badges: ["Bestseller"],
-          dietary: ["halal"],
-          calories: "580 kcal",
-          allergens: ["Gluten", "Dairy"],
-          spicyLevel: 1
-        }
-      ]
-    },
-    {
-      id: "cat-drinks",
-      name: "Drinks",
-      icon: "",
-      items: [
-        {
-          id: "item-craft-cocktail",
-          name: "Ember Citrus Fizz",
-          price: 180,
-          description: "Fresh blood orange, rosemary infusion, sparkling tonic and sweet agave nectar.",
-          image: "/images/cocktail.jpg",
-          badges: ["Signature"],
-          dietary: ["vegan"],
-          calories: "140 kcal",
-          allergens: [],
-          spicyLevel: 0
-        }
-      ]
-    }
-  ]
+  categories: getDefaultIndianCategories()
 };
 
 export const STORAGE_KEY = "menu_qr_restaurant_data";
 
 export function loadRestaurantData() {
+  const storedName = localStorage.getItem('menzo_restaurant_name') || defaultRestaurant.name;
+
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
-      return JSON.parse(saved);
+      const data = JSON.parse(saved);
+      if (Array.isArray(data.categories) && data.categories.length > 0) {
+        data.name = storedName;
+        return data;
+      }
     }
   } catch (e) {
     console.warn("Could not load stored data, using defaults", e);
   }
-  return defaultRestaurant;
+
+  const initial = {
+    ...defaultRestaurant,
+    name: storedName,
+    categories: getDefaultIndianCategories()
+  };
+
+  // Save to localStorage so studio editor and simulator immediately have data
+  saveRestaurantData(initial);
+  return initial;
 }
 
 export function saveRestaurantData(data) {

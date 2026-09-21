@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Menzo PRO</title>
+  <meta name="description" content="Manage your restaurant menu, table QR codes, and live orders." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/dashboard.css" />
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    
+    <!-- ============================================================
+         LEFT SIDEBAR NAVIGATION
+         ============================================================ -->
+    <aside class="dash-sidebar" id="dash-sidebar">
+      
+      <!-- Brand Logo & Plan Badge -->
+      <div class="dash-sidebar-brand">
+        <a href="/dashboard.html" class="dash-brand-link">
+          <img src="/images/menzo-icon.png" alt="Menzo" class="dash-brand-icon" />
+          <span class="dash-brand-name">Menzo</span>
+        </a>
+        <span class="dash-plan-badge" id="dash-brand-plan-badge">PRO</span>
+      </div>
+
+      <!-- Main Navigation Links -->
+      <nav class="dash-nav-menu" aria-label="Main Navigation">
+        <button class="dash-nav-item is-active" data-view="dashboard">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          <span>Dashboard</span>
+        </button>
+
+        <button class="dash-nav-item" data-view="menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>Menu</span>
+        </button>
+
+        <button class="dash-nav-item" data-view="categories">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+          <span>Categories</span>
+        </button>
+
+        <button class="dash-nav-item" data-view="qrcode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="8" height="8" rx="1"></rect>
+            <rect x="14" y="2" width="8" height="8" rx="1"></rect>
+            <rect x="2" y="14" width="8" height="8" rx="1"></rect>
+            <path d="M14 14h3v3h-3z"></path>
+            <path d="M20 14v6h-6"></path>
+            <path d="M14 20h3"></path>
+          </svg>
+          <span>QR Code</span>
+        </button>
+
+        <!-- Pro-only Tables Tab -->
+        <button class="dash-nav-item" data-view="tables" id="nav-tables-tab">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="8" rx="2"></rect>
+            <path d="M4 12v8"></path>
+            <path d="M20 12v8"></path>
+            <path d="M9 12v4"></path>
+            <path d="M15 12v4"></path>
+          </svg>
+          <span>Tables</span>
+          <span class="pro-tag-mini" style="margin-left: auto; font-size: 9px; background: #FFEBE4; color: #F4512A; padding: 2px 6px; border-radius: 4px; font-weight: 800;">PRO</span>
+        </button>
+
+        <!-- Pro-only Orders Tab -->
+        <button class="dash-nav-item" data-view="orders" id="nav-orders-tab">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span>Orders</span>
+          <span class="dash-orders-badge" id="dash-new-orders-counter" style="display: none;">0</span>
+        </button>
+
+        <button class="dash-nav-item" data-view="analytics">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span>Analytics</span>
+        </button>
+
+        <button class="dash-nav-item" data-view="customers">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          <span>Customers</span>
+        </button>
+
+        <button class="dash-nav-item" data-view="reviews">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>Reviews</span>
+        </button>
+
+        <button class="dash-nav-item" data-view="branding">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="13.5" cy="6.5" r=".5"></circle>
+            <circle cx="17.5" cy="10.5" r=".5"></circle>
+            <circle cx="8.5" cy="7.5" r=".5"></circle>
+            <circle cx="6.5" cy="12.5" r=".5"></circle>
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+          </svg>
+          <span>Branding</span>
+        </button>
+
+        <button class="dash-nav-item" data-view="integrations">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          <span>Integrations</span>
+        </button>
+
+        <button class="dash-nav-item" data-view="settings">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>Settings</span>
+        </button>
+      </nav>
+
+      <!-- Sidebar Bottom Plan Card -->
+      <div class="dash-sidebar-plan-card">
+        <div class="dash-plan-crown">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 4px;">
+            <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path>
+          </svg>
+          <strong id="sidebar-plan-name">Pro Plan</strong>
+        </div>
+        <p class="dash-plan-text" id="sidebar-plan-desc">
+          You're on the Pro plan. Manage your restaurant, customize everything and grow faster.
+        </p>
+        <button class="dash-plan-manage-btn" id="btn-manage-plan">
+          Manage Plan
+        </button>
+      </div>
+
+      <!-- Bottom Cafe Ambience with Cursive Doodle -->
+      <div class="dash-sidebar-ambience">
+        <img src="/images/onboarding_cafe.png" alt="Cafe table" class="dash-ambience-img" />
+        <div class="dash-doodle-overlay">
+          <span class="dash-doodle-text">Good<br>food goes<br>further .</span>
+          <svg class="dash-doodle-curve" width="36" height="10" viewBox="0 0 50 12" fill="none">
+            <path d="M2 3C15 10 35 10 48 3" stroke="#F4512A" stroke-width="2.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- ============================================================
+         RIGHT MAIN DASHBOARD CONTAINER
+         ============================================================ -->
+    <div class="dash-main-container">
+      
+      <!-- Top Navigation Header -->
+      <header class="dash-top-header">
+        <div class="dash-header-left">
+          <!-- Mobile sidebar toggle -->
+          <button class="dash-mobile-menu-btn" id="btn-toggle-sidebar" aria-label="Toggle Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <div class="dash-header-right">
+          <!-- Notification Bell with red dot -->
+          <button class="dash-icon-btn" aria-label="Notifications">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="dash-notif-dot"></span>
+          </button>
+
+          <!-- Restaurant Selector & Profile Avatar -->
+          <div class="dash-profile-dropdown" id="dash-profile-trigger">
+            <div class="dash-avatar-circle" id="dash-avatar-initial">R</div>
+            <span class="dash-rest-name" id="dash-rest-name-display">Rohan's Café</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </div>
+      </header>
+
+      <!-- Scrollable View Body -->
+      <main class="dash-view-content" id="dash-view-mount">
+        <!-- Dynamic views will render here via src/dashboard.js:
+             1. view-dashboard
+             2. view-tables
+             3. view-orders
+             4. view-menu
+             5. view-qrcode
+        -->
+      </main>
+
+    </div>
+
+  </div>
+
+  <script type="module" src="/src/dashboard.js"></script>
+</body>
+</html>

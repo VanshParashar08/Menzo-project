@@ -2,10 +2,39 @@ import confetti from 'canvas-confetti';
 import { loadRestaurantData, saveRestaurantData } from './data/defaultMenu.js';
 import { renderCustomerMenu } from './components/renderCustomerMenu.js';
 import { generateStyledQRCode, downloadCanvasPNG } from './utils/qrHelper.js';
+import { onAuthChange, logoutUser } from './services/authService.js';
+import { initOrdersDashboard } from './components/ordersDashboard.js';
+import { getCurrentPlan, getCurrentPlanConfig, getLiveOrders, ORDER_STATUS, setPlan, PLAN_TIERS } from './services/planService.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Load initial data
   let restaurant = loadRestaurantData();
+
+  // Wire User Auth Badge in Header
+  const studioUserBadge = document.getElementById('studio-user-badge');
+  const studioUserAvatar = document.getElementById('studio-user-avatar');
+  const studioLogoutBtn = document.getElementById('studio-logout-btn');
+
+  onAuthChange((user) => {
+    if (user && studioUserBadge) {
+      studioUserBadge.style.display = 'inline-flex';
+      const name = user.displayName || localStorage.getItem('menzo_owner_name') || user.email || 'M';
+      if (studioUserAvatar) {
+        if (user.photoURL) {
+          studioUserAvatar.innerHTML = `<img src="${user.photoURL}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" alt="${name}"/>`;
+        } else {
+          studioUserAvatar.textContent = name.charAt(0).toUpperCase();
+        }
+      }
+    } else if (studioUserBadge) {
+      studioUserBadge.style.display = 'none';
+    }
+  });
+
+  studioLogoutBtn?.addEventListener('click', async () => {
+    await logoutUser();
+    window.location.href = '/get-started.html?mode=login';
+  });
 
   // Check URL query param for restaurant name (e.g. ?name=...)
   const params = new URLSearchParams(window.location.search);
@@ -36,6 +65,70 @@ document.addEventListener('DOMContentLoaded', () => {
     updateHeader();
     updateStudioQR();
   }
+
+  // Plan Status Badge in Header
+  function updatePlanHeaderBadge() {
+    const badgeMount = document.getElementById('studio-plan-badge');
+    if (!badgeMount) return;
+
+    const plan = getCurrentPlan();
+
+    if (plan === PLAN_TIERS.FREE) {
+      badgeMount.innerHTML = `
+        <span style="display: inline-flex; align-items: center; gap: 4px; background: #374151; color: #E5E7EB; padding: 2px 9px; border-radius: 999px; font-size: 11px; font-weight: 700;">
+          Free Plan
+        </span>
+        <button type="button" class="btn btn-primary" id="btn-upgrade-plan-pill" style="padding: 2px 8px; font-size: 11px; height: 22px; margin-left: 5px; border-radius: 6px; cursor: pointer;">
+          Upgrade
+        </button>
+      `;
+      badgeMount.querySelector('#btn-upgrade-plan-pill')?.addEventListener('click', () => {
+        window.location.href = '/choose-plan.html';
+      });
+    } else if (plan === PLAN_TIERS.PRO) {
+      badgeMount.innerHTML = `
+        <span style="display: inline-flex; align-items: center; gap: 4px; background: rgba(244, 81, 42, 0.15); color: #F4512A; border: 1px solid rgba(244, 81, 42, 0.4); padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 800;">
+          ⭐ Pro Member
+        </span>
+      `;
+    } else if (plan === PLAN_TIERS.BUSINESS) {
+      let branches = ['Main Outlet'];
+      try {
+        branches = JSON.parse(localStorage.getItem('menzo_registered_branches') || '["Main Outlet"]');
+      } catch (e) {}
+
+      badgeMount.innerHTML = `
+        <span style="display: inline-flex; align-items: center; gap: 4px; background: #111820; color: #60A5FA; border: 1px solid #3B82F6; padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 800;">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14"></path></svg>
+          <span>Business Enterprise</span>
+        </span>
+        <select id="select-active-branch" style="background: var(--bg-surface-elevated); color: var(--text-primary); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 2px 6px; font-size: 11px; font-weight: 600; margin-left: 6px;">
+          ${branches.map(b => `<option value="${b}">${b}</option>`).join('')}
+        </select>
+      `;
+
+      badgeMount.querySelector('#select-active-branch')?.addEventListener('change', (e) => {
+        localStorage.setItem('menzo_active_branch', e.target.value);
+        window.dispatchEvent(new CustomEvent('menzo_orders_updated'));
+      });
+    }
+
+    // Update order counter badge in tab
+    const counterEl = document.getElementById('order-counter-badge');
+    if (counterEl) {
+      const activeOrders = getLiveOrders().filter(o => o.status !== ORDER_STATUS.COMPLETED);
+      if (activeOrders.length > 0) {
+        counterEl.style.display = 'inline-flex';
+        counterEl.textContent = activeOrders.length;
+      } else {
+        counterEl.style.display = 'none';
+      }
+    }
+  }
+
+  updatePlanHeaderBadge();
+  window.addEventListener('menzo_orders_updated', updatePlanHeaderBadge);
+  window.addEventListener('menzo_plan_changed', updatePlanHeaderBadge);
 
   // 2. Header and Branding sync
   const headerName = document.getElementById('header-restaurant-name');
@@ -95,14 +188,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Color Swatches
+  // Color theme swatches
   const colorSwatches = document.querySelectorAll('.color-swatch');
   colorSwatches.forEach(swatch => {
     swatch.addEventListener('click', () => {
       colorSwatches.forEach(s => s.classList.remove('active'));
       swatch.classList.add('active');
-      const color = swatch.dataset.color;
-      restaurant.themeColor = color;
+      restaurant.themeColor = swatch.dataset.color;
       syncAndSave();
     });
   });
@@ -112,8 +204,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabContents = {
     'tab-menu': document.getElementById('tab-menu'),
     'tab-branding': document.getElementById('tab-branding'),
-    'tab-qr': document.getElementById('tab-qr')
+    'tab-qr': document.getElementById('tab-qr'),
+    'tab-orders': document.getElementById('tab-orders')
   };
+
+  // Mount Orders Dashboard
+  const ordersMount = document.getElementById('orders-dashboard-mount');
+  if (ordersMount) {
+    initOrdersDashboard(ordersMount);
+  }
 
   editorTabs.forEach(tab => {
     tab.addEventListener('click', () => {

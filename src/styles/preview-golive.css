@@ -151,12 +151,12 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #FEF3C7;
+  background: #F3F4F6;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid #FDE68A;
+  border: 1px solid #E5E7EB;
 }
 
 .golive-phone-titles {
@@ -338,12 +338,17 @@
   justify-content: center;
 }
 
-.qr-code-img {
-  width: 130px;
-  height: 130px;
+.qr-code-img,
+.qr-code-canvas {
+  width: 150px !important;
+  height: 150px !important;
+  max-width: 150px !important;
+  max-height: 150px !important;
   display: block;
   object-fit: contain;
   border-radius: 10px;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .qr-download-btn {
@@ -382,9 +387,36 @@
   left: -8px;
 }
 
-.spark-bottom-left {
+.spark-bottom-right {
   bottom: -8px;
-  left: -8px;
+  right: -8px;
+}
+
+/* Sidebar Ambience Doodle */
+.sidebar-doodle-overlay {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sidebar-doodle-text {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  font-weight: 700;
+  color: #F4512A;
+  line-height: 1.05;
+  text-align: right;
+  transform: rotate(3deg);
+}
+
+.sidebar-doodle-curve {
+  margin-top: 2px;
+  margin-right: 4px;
 }
 
 /* --- Share Everywhere Card --- */

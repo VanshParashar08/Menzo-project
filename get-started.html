@@ -13,56 +13,160 @@
 </head>
 <body class="get-started-body">
 
-  <div class="get-started-layout">
-    
-    <!-- ============================================================
-         LEFT PANEL: VISUAL SHOWCASE & RESTAURANT AMBIENCE
-         ============================================================ -->
-    <aside class="get-started-showcase-panel" aria-label="Menzo Restaurant Showcase">
-      <div class="showcase-inner-wrap">
-        <!-- High-res background image covering the full panel -->
-        <img src="/images/get_started_showcase.png" alt="Menzo restaurant table display with QR menu" class="showcase-bg-image" />
-        
-        <!-- Accessible text overlay for assistive tech & SEO -->
-        <div class="sr-only">
-          <h2>Menzo: Menus for a better dining experience</h2>
-          <p>Create, manage and share your menu in minutes — no app needed.</p>
-          <ul>
-            <li>Set up fast — Get your menu live in minutes</li>
-            <li>Go digital — Share via QR code</li>
-            <li>Grow your business — Attract more happy customers</li>
-          </ul>
-          <p>Simple. Modern. For every restaurant. Trusted by The Food Club, SPICE BOX, Cafe 47, and Mumbai Bites.</p>
-        </div>
+  <!-- ============================================================
+       TOP NAVBAR: LOGO & AUTH MODE TOGGLE
+       ============================================================ -->
+  <header class="auth-page-navbar">
+    <div class="auth-navbar-container">
+      <a href="/" class="auth-brand-logo" aria-label="Menzo Home">
+        <img src="/images/menzo-icon-4k.png" alt="Menzo" class="auth-brand-icon" />
+        <span class="auth-brand-name">Menzo</span>
+      </a>
+
+      <div class="auth-top-actions">
+        <span class="already-account-text" id="top-auth-prompt">Already have an account?</span>
+        <button type="button" class="top-login-btn" id="toggle-auth-mode-btn">Log in</button>
       </div>
-    </aside>
+    </div>
+  </header>
 
-    <!-- ============================================================
-         RIGHT PANEL: ACCOUNT CREATION FORM
-         ============================================================ -->
-    <main class="get-started-form-panel">
-      <!-- Top Bar with Login Link -->
-      <div class="form-top-bar">
-        <span class="already-account-text">Already have an account?</span>
-        <a href="/generator.html" class="top-login-btn">Log in</a>
+  <!-- ============================================================
+       MAIN CONTENT: CENTERED AUTHENTICATION CARD
+       ============================================================ -->
+  <main class="auth-page-main">
+    <!-- Ambient Organic Blobs for Landing Page Warm Atmosphere -->
+    <div class="auth-bg-blob-1" aria-hidden="true"></div>
+    <div class="auth-bg-blob-2" aria-hidden="true"></div>
+
+    <!-- Floating Background Decorative Culinary Icons & Doodles -->
+    <div class="auth-bg-decorations" aria-hidden="true">
+      <!-- 1. Top Left: Fork & Knife Pill Badge -->
+      <div class="bg-icon-badge bg-badge-top-left float-anim-1" title="Culinary">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2v20M2 2v10a4 4 0 0 0 4 4h4M6 2v6M10 2v6"/>
+        </svg>
       </div>
 
-      <!-- Main Form Wrapper -->
-      <div class="form-content-container">
-        <!-- Brand Logo Header -->
-        <a href="/" class="form-brand-lockup" aria-label="Menzo Home">
-          <img src="/images/menzo-icon.png" alt="Menzo" class="form-brand-icon" />
-          <span class="form-brand-name">Menzo</span>
-        </a>
+      <!-- 2. Top Right: Cloche Serving Cover -->
+      <div class="bg-icon-badge bg-badge-top-right float-anim-2" title="Fine Dining">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 4V2"/>
+          <path d="M4 18h16a1 1 0 0 0 1-1A9 9 0 0 0 3 17a1 1 0 0 0 1 1z"/>
+          <path d="M2 22h20"/>
+        </svg>
+      </div>
 
-        <!-- Title & Subtitle -->
-        <div class="form-header-text">
-          <h1 class="form-main-title">Get Started</h1>
-          <p class="form-main-subtitle">Create your restaurant account</p>
-        </div>
+      <!-- 3. Left Middle: Handwritten Doodle Note with Arrow -->
+      <div class="bg-doodle-note bg-doodle-left float-anim-3">
+        <span class="doodle-note-text">Simple. Modern.<br>For every restaurant.</span>
+        <svg class="doodle-note-arrow" width="56" height="38" viewBox="0 0 56 38" fill="none">
+          <path d="M6 8 C20 26, 38 28, 50 18" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <polyline points="42 12 50 18 44 26" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
 
-        <!-- Registration Form -->
-        <form id="signup-form" class="restaurant-signup-form" novalidate>
+      <!-- 4. Bottom Left: Coffee / Beverage Cup Badge -->
+      <div class="bg-icon-badge bg-badge-bottom-left float-anim-2" title="Café & Bistro">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+          <line x1="6" y1="1" x2="6" y2="4"/>
+          <line x1="10" y1="1" x2="10" y2="4"/>
+          <line x1="14" y1="1" x2="14" y2="4"/>
+        </svg>
+      </div>
+
+      <!-- 5. Right Middle: Handwritten Note with Arrow & Sparkle -->
+      <div class="bg-doodle-note bg-doodle-right float-anim-1">
+        <span class="doodle-sparkle">✦</span>
+        <span class="doodle-note-text">Live menu in<br>5 minutes!</span>
+        <svg class="doodle-note-arrow-right" width="52" height="34" viewBox="0 0 52 34" fill="none">
+          <path d="M48 6 C34 22, 18 24, 6 16" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <polyline points="14 12 6 16 12 24" stroke="#F4512A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- 6. Bottom Right: QR Code Badge -->
+      <div class="bg-icon-badge bg-badge-bottom-right float-anim-3" title="Instant QR">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+          <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+          <rect x="14" y="14" width="3" height="3"/>
+          <rect x="18" y="18" width="3" height="3"/>
+        </svg>
+      </div>
+
+      <!-- 7. Floating Wine Glass Badge -->
+      <div class="bg-icon-badge bg-badge-mid-right float-anim-2" title="Drinks & Bars">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111820" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 22h8"/>
+          <path d="M12 15v7"/>
+          <path d="M5 3h14l-2 9a5 5 0 0 1-10 0L5 3z"/>
+        </svg>
+      </div>
+
+      <!-- 8. Floating Flame / Grill Badge -->
+      <div class="bg-icon-badge bg-badge-mid-left float-anim-1" title="Fresh & Hot">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+        </svg>
+      </div>
+
+      <!-- 9. Floating Sparkles & Stars -->
+      <div class="bg-sparkle sparkle-1">✦</div>
+      <div class="bg-sparkle sparkle-2">★</div>
+      <div class="bg-sparkle sparkle-3">✦</div>
+      <div class="bg-sparkle sparkle-4">✦</div>
+      <div class="bg-sparkle sparkle-5">★</div>
+    </div>
+
+    <div class="form-content-container">
+      <!-- Auth Tabs Switcher (Create Account / Log In) -->
+      <div class="auth-mode-tabs" role="tablist">
+        <button type="button" class="auth-tab active" id="tab-signup" role="tab" aria-selected="true">
+          Create Account
+        </button>
+        <button type="button" class="auth-tab" id="tab-login" role="tab" aria-selected="false">
+          Log In
+        </button>
+      </div>
+
+      <!-- Title & Subtitle -->
+      <div class="form-header-text">
+        <h1 class="form-main-title" id="form-title">Get Started</h1>
+        <p class="form-main-subtitle" id="form-subtitle">Create your restaurant account</p>
+      </div>
+
+      <!-- System Notification / Error Alert Container -->
+      <div id="auth-alert" class="auth-alert" style="display: none;" role="alert">
+        <div class="auth-alert-icon" id="auth-alert-icon"></div>
+        <div class="auth-alert-message" id="auth-alert-message"></div>
+      </div>
+
+      <!-- One-Click Google Authentication -->
+      <button type="button" class="btn-social-auth google-auth-btn" id="google-auth-btn">
+        <svg class="google-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17Z"/>
+          <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.15C3.25 21.37 7.31 24 12 24Z"/>
+          <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.14-1.55.38-2.27V6.58H1.26C.46 8.16 0 9.94 0 12s.46 3.84 1.26 5.42l4.02-3.15Z"/>
+          <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.25 2.63 1.26 6.58l4.02 3.15c.95-2.83 3.6-4.98 6.72-4.98Z"/>
+        </svg>
+        <span id="google-auth-text">Continue with Google</span>
+      </button>
+      <button type="button" id="google-redirect-btn" style="background:none;border:none;color:#6B7280;font-size:12px;cursor:pointer;padding:4px 0 0;margin-top:2px;display:block;width:100%;text-align:center;font-family:inherit;">
+        Trouble with popups? <span style="text-decoration:underline;color:#F4512A;font-weight:600;">Use full-page redirect</span>
+      </button>
+
+      <!-- Divider -->
+      <div class="auth-divider">
+        <span class="auth-divider-text">or continue with email</span>
+      </div>
+
+      <!-- Registration & Login Form -->
+      <form id="signup-form" class="restaurant-signup-form" novalidate>
+        <!-- Sign-Up Specific Fields Container -->
+        <div id="signup-extra-fields">
           <!-- Field 1: Restaurant Name -->
           <div class="form-field-group">
             <label for="restaurantName" class="form-label">Restaurant Name</label>
@@ -72,7 +176,6 @@
               name="restaurantName" 
               class="form-input-text" 
               placeholder="e.g. The Food Club" 
-              required 
               autocomplete="organization"
             />
             <span class="field-error-msg" id="error-restaurantName"></span>
@@ -87,7 +190,6 @@
               name="ownerName" 
               class="form-input-text" 
               placeholder="e.g. Rohan Mehta" 
-              required 
               autocomplete="name"
             />
             <span class="field-error-msg" id="error-ownerName"></span>
@@ -115,115 +217,103 @@
                 name="phoneNumber" 
                 class="form-input-phone" 
                 placeholder="98765 43210" 
-                required 
                 autocomplete="tel-national"
               />
             </div>
             <span class="field-error-msg" id="error-phoneNumber"></span>
           </div>
+        </div>
 
-          <!-- Field 4: Email Address -->
-          <div class="form-field-group">
-            <label for="emailAddress" class="form-label">Email Address</label>
+        <!-- Common Field: Email Address -->
+        <div class="form-field-group">
+          <label for="emailAddress" class="form-label">Email Address</label>
+          <input 
+            type="email" 
+            id="emailAddress" 
+            name="emailAddress" 
+            class="form-input-text" 
+            placeholder="you@restaurant.com" 
+            required 
+            autocomplete="email"
+          />
+          <span class="field-error-msg" id="error-emailAddress"></span>
+        </div>
+
+        <!-- Common Field: Password with Toggle -->
+        <div class="form-field-group">
+          <div class="password-label-wrapper">
+            <label for="accountPassword" class="form-label" id="password-label">Password</label>
+            <button type="button" class="forgot-password-link" id="forgot-password-btn" style="display: none;">
+              Forgot?
+            </button>
+          </div>
+          <div class="password-input-composite">
             <input 
-              type="email" 
-              id="emailAddress" 
-              name="emailAddress" 
-              class="form-input-text" 
-              placeholder="you@restaurant.com" 
+              type="password" 
+              id="accountPassword" 
+              name="accountPassword" 
+              class="form-input-password" 
+              placeholder="Enter password" 
               required 
-              autocomplete="email"
+              autocomplete="current-password"
             />
-            <span class="field-error-msg" id="error-emailAddress"></span>
+            <button type="button" class="password-toggle-btn" id="password-toggle" aria-label="Toggle password visibility">
+              <!-- Eye Open -->
+              <svg class="eye-icon eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <!-- Eye Closed -->
+              <svg class="eye-icon eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+              </svg>
+            </button>
           </div>
-
-          <!-- Field 5: Password with Toggle -->
-          <div class="form-field-group">
-            <label for="accountPassword" class="form-label">Password</label>
-            <div class="password-input-composite">
-              <input 
-                type="password" 
-                id="accountPassword" 
-                name="accountPassword" 
-                class="form-input-password" 
-                placeholder="Create a password" 
-                required 
-                autocomplete="new-password"
-              />
-              <button type="button" class="password-toggle-btn" id="password-toggle" aria-label="Toggle password visibility">
-                <!-- Eye Open -->
-                <svg class="eye-icon eye-open" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-                <!-- Eye Closed -->
-                <svg class="eye-icon eye-closed" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-                  <line x1="1" y1="1" x2="23" y2="23"></line>
-                </svg>
-              </button>
-            </div>
-            <span class="field-error-msg" id="error-accountPassword"></span>
-          </div>
-
-          <!-- Submit CTA Button -->
-          <button type="submit" class="submit-create-account-btn" id="submit-btn">
-            <span>Create Account</span>
-            <span class="submit-arrow">&rarr;</span>
-          </button>
-        </form>
-
-        <!-- Divider with 'or' -->
-        <div class="auth-divider-line">
-          <span class="auth-divider-text">or</span>
+          <span class="field-error-msg" id="error-accountPassword"></span>
         </div>
 
-        <!-- Social Authentication Buttons Row -->
-        <div class="social-auth-row">
-          <button type="button" class="social-auth-btn social-google-btn" id="google-auth-btn">
-            <svg width="18" height="18" viewBox="0 0 18 18" class="social-btn-icon">
-              <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.616z"/>
-              <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.184l-2.908-2.258c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/>
-              <path fill="#FBBC05" d="M3.964 10.707c-.18-.54-.282-1.117-.282-1.707s.102-1.167.282-1.707V4.961H.957C.347 6.173 0 7.548 0 9s.347 2.827.957 4.039l3.007-2.332z"/>
-              <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.961L3.964 7.293C4.672 5.166 6.656 3.58 9 3.58z"/>
-            </svg>
-            <span>Continue with Google</span>
-          </button>
+        <!-- Submit CTA Button -->
+        <button type="submit" class="submit-create-account-btn" id="submit-btn">
+          <span id="submit-btn-text">Create Account</span>
+          <span class="submit-arrow">&rarr;</span>
+        </button>
+      </form>
 
-          <button type="button" class="social-auth-btn social-apple-btn" id="apple-auth-btn">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" class="social-btn-icon">
-              <path d="M14.54 13.97c-.36.79-.79 1.5-1.28 2.14-.66.86-1.2 1.47-1.63 1.83-.65.57-1.34.86-2.07.86-.53 0-1.14-.14-1.83-.43-.69-.29-1.35-.43-1.99-.43-.67 0-1.36.14-2.06.43-.7.29-1.3.44-1.8.44-.7 0-1.4-.3-2.09-.89-.47-.41-1.04-1.04-1.72-1.9-.84-1.06-1.5-2.29-1.98-3.69C-.52 10.9.06 9.49.06 8.09c0-1.42.4-2.59 1.2-3.52.8-.93 1.78-1.4 2.94-1.4.67 0 1.38.16 2.13.49.75.33 1.26.5 1.53.5.21 0 .74-.18 1.58-.53.84-.36 1.57-.5 2.18-.44 1.7.14 3.01.81 3.93 2-.99.59-1.5 1.41-1.52 2.46-.03 1.05.41 1.94 1.31 2.66.42.34.89.58 1.41.73-.24.78-.58 1.59-1.02 2.43zM11.64.08c0 .87-.33 1.73-.99 2.58-.66.85-1.47 1.36-2.43 1.53-.02-.12-.03-.23-.03-.33 0-.85.34-1.73 1.02-2.64C9.89.31 10.74 0 11.64.08z"/>
-            </svg>
-            <span>Continue with Apple</span>
-          </button>
-        </div>
+      <!-- Terms of Service & Privacy Policy -->
+      <p class="terms-privacy-notice" id="terms-notice">
+        By creating an account, you agree to our <a href="/#terms" class="legal-link">Terms of Service</a> and <a href="/#privacy" class="legal-link">Privacy Policy</a>.
+      </p>
 
-        <!-- Terms of Service & Privacy Policy -->
-        <p class="terms-privacy-notice">
-          By continuing, you agree to our <a href="/#terms" class="legal-link">Terms of Service</a> and <a href="/#privacy" class="legal-link">Privacy Policy</a>.
-        </p>
-      </div>
-
-      <!-- Bottom Right Organic Blob & Doodle -->
-      <div class="bottom-decorative-area">
-        <div class="bottom-blob-shape blob-shape-right"></div>
-        <div class="bottom-blob-shape blob-shape-left"></div>
-        
-        <div class="bottom-doodle-lockup">
-          <svg class="doodle-arrow-svg" width="34" height="28" viewBox="0 0 34 28" fill="none">
-            <path d="M28 22 C22 26, 12 24, 6 14 C4 10, 4 6, 6 2" stroke="#D64620" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-            <path d="M1 8 L6 2 L11 7" stroke="#D64620" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Bottom Trust Badges Bar -->
+      <div class="bottom-trust-badges-bar">
+        <div class="trust-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="trust-badge-icon">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
           </svg>
-          <div class="bottom-doodle-text">
-            Let's put<br />
-            your menu<br />
-            on the map.
-          </div>
+          <span class="trust-badge-text">Secure & Safe</span>
+        </div>
+
+        <div class="trust-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="trust-badge-icon">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <span class="trust-badge-text">10K+ Restaurants</span>
+        </div>
+
+        <div class="trust-badge-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F4512A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="trust-badge-icon">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          <span class="trust-badge-text">Made for You</span>
         </div>
       </div>
-    </main>
-
-  </div>
+    </div>
+  </main>
 
   <script type="module" src="/src/get-started.js"></script>
 </body>

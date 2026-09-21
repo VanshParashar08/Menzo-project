@@ -30,6 +30,7 @@
             <span class="status-dot"></span>
             <span>Saved</span>
           </span>
+          <div id="studio-plan-badge" style="margin-left: 6px;"></div>
         </div>
       </div>
 
@@ -42,6 +43,12 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           <span>Download QR</span>
         </button>
+        <div class="studio-user-badge" id="studio-user-badge" style="display: none; align-items: center; gap: 8px; margin-left: 6px;">
+          <div class="user-avatar-pill" id="studio-user-avatar" style="width: 30px; height: 30px; border-radius: 50%; background: #F4512A; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;">M</div>
+          <button type="button" class="btn btn-secondary btn-sm" id="studio-logout-btn" title="Sign out" style="padding: 5px 10px; font-size: 12px;">
+            <span>Sign Out</span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -60,13 +67,17 @@
         <!-- Tab Navigation -->
         <nav class="editor-tabs-bar">
           <button class="editor-tab-btn active" data-tab="tab-menu">
-            Menu & Items
+            Menu &amp; Items
           </button>
           <button class="editor-tab-btn" data-tab="tab-branding">
-            Branding & Info
+            Branding &amp; Info
           </button>
           <button class="editor-tab-btn" data-tab="tab-qr">
-            QR & Stand
+            QR &amp; Stand
+          </button>
+          <button class="editor-tab-btn" data-tab="tab-orders" id="tab-btn-orders">
+            <span>Live Orders</span>
+            <span class="order-counter-pill" id="order-counter-badge">3</span>
           </button>
         </nav>
 
@@ -194,6 +205,13 @@
           </div>
         </div>
 
+        <!-- Tab 4: Live Order Management (Pro & Business) -->
+        <div class="editor-tab-content" id="tab-orders" style="display: none;">
+          <div id="orders-dashboard-mount">
+            <!-- Rendered dynamically by generator.js based on active plan -->
+          </div>
+        </div>
+
       </section>
 
       <!-- Right Panel: Real-Time Live Device Simulator -->
@@ -271,14 +289,6 @@
           <label class="form-label">Dish Photo Preset</label>
           <select class="form-select" id="dish-form-image">
             <option value="">No Photo (Text-only)</option>
-            <option value="/images/pizza.jpg">Margherita Pizza Photo</option>
-            <option value="/images/paneer_tikka.jpg">Paneer Tikka Photo</option>
-            <option value="/images/choco_lava_cake.jpg">Choco Lava Cake Photo</option>
-            <option value="/images/pasta.jpg">Pasta Alfredo Photo</option>
-            <option value="/images/chole_bhature.jpg">Chole Bhature Photo</option>
-            <option value="/images/kulhad_lassi.jpg">Special Kulhad Lassi Photo</option>
-            <option value="/images/burger.jpg">Classic Burger Photo</option>
-            <option value="/images/cocktail.jpg">Craft Cocktail Photo</option>
           </select>
         </div>
 

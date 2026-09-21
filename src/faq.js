@@ -4,6 +4,8 @@
    - Mobile navigation drawer
    ============================================================ */
 
+import './components/navbarAuth.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   // 1. FAQ Accordion Logic
   const faqCards = document.querySelectorAll('.faq-acc-card');
